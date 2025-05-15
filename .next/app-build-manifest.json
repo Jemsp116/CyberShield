@@ -1,9 +1,9 @@
 {
   "pages": {
-    "/page": [
+    "/solutions/enterprise-security/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
+      "static/chunks/app/solutions/enterprise-security/page.js"
     ],
     "/layout": [
       "static/chunks/webpack.js",
@@ -16,35 +16,20 @@
       "static/chunks/main-app.js",
       "static/chunks/app/not-found.js"
     ],
-    "/careers/page": [
+    "/solutions/cloud-security/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/careers/page.js"
+      "static/chunks/app/solutions/cloud-security/page.js"
     ],
-    "/about/page": [
+    "/solutions/network-protection/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/about/page.js"
+      "static/chunks/app/solutions/network-protection/page.js"
     ],
-    "/contact/page": [
+    "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/contact/page.js"
-    ],
-    "/about/team/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/about/team/page.js"
-    ],
-    "/services/penetration-testing/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/services/penetration-testing/page.js"
-    ],
-    "/services/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/services/page.js"
+      "static/chunks/app/page.js"
     ]
   }
 }
