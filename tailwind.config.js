@@ -22,7 +22,61 @@ module.exports = {
           900: '#064e3b',
         },
       },
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            color: theme('colors.gray.300'),
+            h1: {
+              color: theme('colors.white'),
+            },
+            h2: {
+              color: theme('colors.white'),
+            },
+            h3: {
+              color: theme('colors.white'),
+            },
+            h4: {
+              color: theme('colors.white'),
+            },
+            a: {
+              color: theme('colors.emerald.500'),
+              '&:hover': {
+                color: theme('colors.emerald.400'),
+              },
+            },
+            strong: {
+              color: theme('colors.white'),
+            },
+            blockquote: {
+              color: theme('colors.gray.400'),
+              borderLeftColor: theme('colors.emerald.600'),
+            },
+            code: {
+              color: theme('colors.emerald.400'),
+            },
+            pre: {
+              backgroundColor: theme('colors.gray.900'),
+            },
+            ul: {
+              li: {
+                '&::before': {
+                  backgroundColor: theme('colors.emerald.500'),
+                },
+              },
+            },
+            ol: {
+              li: {
+                '&::before': {
+                  color: theme('colors.emerald.500'),
+                },
+              },
+            },
+          },
+        },
+      }),
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }; 
