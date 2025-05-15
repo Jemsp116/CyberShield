@@ -1,3 +1,5 @@
+"use client"
+
 import Link from 'next/link';
 
 const AboutPreview = () => {
@@ -17,19 +19,19 @@ const AboutPreview = () => {
             </p>
             
             <div className="grid grid-cols-2 gap-6 mb-8">
-              <div>
+              <div className="cyber-card">
                 <div className="text-3xl font-bold text-emerald-500 mb-2">15+</div>
                 <div className="text-gray-400">Years of Experience</div>
               </div>
-              <div>
+              <div className="cyber-card">
                 <div className="text-3xl font-bold text-emerald-500 mb-2">200+</div>
                 <div className="text-gray-400">Security Experts</div>
               </div>
-              <div>
+              <div className="cyber-card">
                 <div className="text-3xl font-bold text-emerald-500 mb-2">5000+</div>
                 <div className="text-gray-400">Security Incidents Resolved</div>
               </div>
-              <div>
+              <div className="cyber-card">
                 <div className="text-3xl font-bold text-emerald-500 mb-2">99.8%</div>
                 <div className="text-gray-400">Client Satisfaction</div>
               </div>

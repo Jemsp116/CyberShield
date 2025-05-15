@@ -1,11 +1,28 @@
 "use client"
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      if (offset > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -34,13 +51,13 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-black shadow-lg border-b border-gray-800 sticky top-0 z-50">
+    <nav className={`bg-black shadow-lg border-b border-gray-800 sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'py-2' : 'py-4'}`}>
       <div className="container-custom">
-        <div className="flex justify-between items-center py-4">
+        <div className="flex justify-between items-center">
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
-              <span className="font-bold text-2xl text-emerald-500">CyberShield</span>
+              <span className="font-bold text-2xl text-emerald-500 glow-text">CyberShield</span>
             </Link>
           </div>
 
@@ -61,7 +78,7 @@ const Navbar = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
                 </svg>
               </button>
-              <div className="absolute left-0 mt-2 w-48 bg-gray-900 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-800">
+              <div className="absolute left-0 mt-2 w-48 bg-gray-900 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-800 glow-border">
                 <div className="py-1">
                   <Link href="/about" className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-emerald-500">
                     Who We Are
@@ -90,7 +107,7 @@ const Navbar = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
                 </svg>
               </button>
-              <div className="absolute left-0 mt-2 w-60 bg-gray-900 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-800">
+              <div className="absolute left-0 mt-2 w-60 bg-gray-900 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-800 glow-border">
                 <div className="py-1">
                   {serviceDropdownItems.map((item, index) => (
                     <Link 
@@ -116,7 +133,7 @@ const Navbar = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
                 </svg>
               </button>
-              <div className="absolute left-0 mt-2 w-60 bg-gray-900 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-800">
+              <div className="absolute left-0 mt-2 w-60 bg-gray-900 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-800 glow-border">
                 <div className="py-1">
                   {solutionsDropdownItems.map((item, index) => (
                     <Link 
@@ -139,7 +156,7 @@ const Navbar = () => {
               Contact
             </Link>
 
-            <Link href="/contact" className="ml-2 btn-primary py-2 px-4 rounded-md">
+            <Link href="/contact" className="ml-2 btn-primary py-2 px-4 rounded-md pulse-glow">
               Get a Free Assessment
             </Link>
           </div>
@@ -209,11 +226,7 @@ const Navbar = () => {
                 {activeDropdown === 1 && (
                   <div className="pl-4 border-l border-gray-800 ml-4 mt-1">
                     {serviceDropdownItems.map((item, index) => (
-                      <Link 
-                        key={index} 
-                        href={item.href} 
-                        className="block py-2 px-3 text-gray-400 hover:text-emerald-500"
-                      >
+                      <Link key={index} href={item.href} className="block py-2 px-3 text-gray-400 hover:text-emerald-500">
                         {item.title}
                       </Link>
                     ))}
@@ -235,11 +248,7 @@ const Navbar = () => {
                 {activeDropdown === 2 && (
                   <div className="pl-4 border-l border-gray-800 ml-4 mt-1">
                     {solutionsDropdownItems.map((item, index) => (
-                      <Link 
-                        key={index} 
-                        href={item.href} 
-                        className="block py-2 px-3 text-gray-400 hover:text-emerald-500"
-                      >
+                      <Link key={index} href={item.href} className="block py-2 px-3 text-gray-400 hover:text-emerald-500">
                         {item.title}
                       </Link>
                     ))}
@@ -255,9 +264,11 @@ const Navbar = () => {
                 Contact
               </Link>
               
-              <Link href="/contact" className="mt-2 mx-3 btn-primary py-2 px-4 text-center rounded-md">
-                Get a Free Assessment
-              </Link>
+              <div className="pt-4">
+                <Link href="/contact" className="block w-full btn-primary text-center py-3 pulse-glow">
+                  Get a Free Assessment
+                </Link>
+              </div>
             </div>
           </div>
         )}

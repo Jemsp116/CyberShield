@@ -1,3 +1,5 @@
+"use client"
+
 import Link from 'next/link';
 
 const ServicesSection = () => {
@@ -49,7 +51,7 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-900">
+    <section className="py-20 bg-black">
       <div className="container-custom">
         <div className="text-center mb-16">
           <h2 className="section-heading">Our Cybersecurity Services</h2>
@@ -60,7 +62,10 @@ const ServicesSection = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service) => (
-            <div key={service.id} className="bg-black rounded-lg shadow-lg p-8 transition-transform hover:scale-105 border border-gray-800">
+            <div 
+              key={service.id} 
+              className="cyber-card"
+            >
               <div className="mb-5">{service.icon}</div>
               <h3 className="text-xl font-bold mb-3 text-white">{service.title}</h3>
               <p className="text-gray-400 mb-6">{service.description}</p>

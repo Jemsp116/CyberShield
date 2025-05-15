@@ -31,4 +31,12 @@ body {
   .container-custom {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
+
+  .cyber-card {
+    @apply bg-gray-900 rounded-lg p-6 border border-gray-800 transition-all duration-300;
+  }
+  
+  .cyber-card:hover {
+    @apply transform -translate-y-1 shadow-lg;
+  }
 } 

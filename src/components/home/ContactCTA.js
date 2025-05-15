@@ -1,3 +1,5 @@
+"use client"
+
 import Link from 'next/link';
 
 const ContactCTA = () => {
@@ -12,7 +14,7 @@ const ContactCTA = () => {
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            <div className="bg-gray-900 bg-opacity-50 rounded-lg p-8 border border-gray-800">
+            <div className="cyber-card">
               <div className="bg-emerald-700 p-3 inline-block rounded-full mb-4">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
@@ -22,12 +24,12 @@ const ContactCTA = () => {
               <p className="mb-6 text-gray-300">
                 Get a comprehensive evaluation of your current security posture and identify potential vulnerabilities.
               </p>
-              <Link href="/contact" className="btn-secondary bg-transparent hover:bg-emerald-500 text-emerald-500 hover:text-white border-emerald-500">
+              <Link href="/contact" className="btn-secondary">
                 Book an Assessment
               </Link>
             </div>
             
-            <div className="bg-gray-900 bg-opacity-50 rounded-lg p-8 border border-gray-800">
+            <div className="cyber-card">
               <div className="bg-emerald-700 p-3 inline-block rounded-full mb-4">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
@@ -37,13 +39,13 @@ const ContactCTA = () => {
               <p className="mb-6 text-gray-300">
                 Discuss your specific security concerns with our experienced cybersecurity consultants.
               </p>
-              <Link href="/contact" className="btn-secondary bg-transparent hover:bg-emerald-500 text-emerald-500 hover:text-white border-emerald-500">
+              <Link href="/contact" className="btn-secondary">
                 Contact an Expert
               </Link>
             </div>
           </div>
           
-          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 mt-12">
             <div className="flex items-center">
               <div className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center mr-3">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
