@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useInView } from 'react-intersection-observer';
 
 const Footer = () => {
-  const [footerRef, footerInView] = useInView({
+  const { ref: footerRef, inView: footerInView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });

@@ -1,1 +1,9 @@
-{}
+{
+  "/page": "app/page.js",
+  "/about/page": "app/about/page.js",
+  "/careers/page": "app/careers/page.js",
+  "/about/team/page": "app/about/team/page.js",
+  "/not-found": "app/not-found.js",
+  "/services/penetration-testing/page": "app/services/penetration-testing/page.js",
+  "/contact/page": "app/contact/page.js"
+}
