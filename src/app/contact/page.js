@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'Contact Us | CyberShield Security Solutions',
-  description: 'Get in touch with our cybersecurity experts for a consultation, security assessment, or to learn more about our services.',
+  title: 'Contact Us | K-Infotech Global Consulting Services',
+  description: 'Get in touch with our IT and cybersecurity experts for a consultation, digital transformation assessment, or to learn more about our services.',
 };
 
 export default function ContactPage() {
@@ -12,7 +12,7 @@ export default function ContactPage() {
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
             <p className="text-xl text-gray-300">
-              Get in touch with our cybersecurity experts to discuss your security needs or schedule a consultation.
+              Get in touch with our IT and cybersecurity experts to discuss your technology needs or schedule a consultation.
             </p>
           </div>
         </div>
@@ -30,10 +30,10 @@ export default function ContactPage() {
                 <div>
                   <h3 className="text-lg font-semibold mb-2 text-white">Headquarters</h3>
                   <address className="not-italic text-gray-400">
-                    CyberShield Tower<br />
-                    123 Security Avenue<br />
-                    San Francisco, CA 94105<br />
-                    United States
+                    W-304, Siddhraj Z Square<br />
+                    Kudasan, Gandhinagar<br />
+                    Gujarat 382421<br />
+                    India
                   </address>
                 </div>
                 
@@ -44,13 +44,13 @@ export default function ContactPage() {
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                       </svg>
-                      +1 (800) 123-4567
+                      +91 79 2345 6789
                     </p>
                     <p className="flex items-center">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
-                      contact@cybershield.com
+                      contact@k-infotech.com
                     </p>
                   </div>
                 </div>
@@ -144,7 +144,7 @@ export default function ContactPage() {
                       id="message" 
                       rows="5" 
                       className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-white"
-                      placeholder="Describe your security needs or questions..."
+                      placeholder="Describe your IT or security needs or questions..."
                     ></textarea>
                   </div>
                   
@@ -180,7 +180,6 @@ export default function ContactPage() {
             <div className="bg-black p-6 rounded-lg shadow-md border border-gray-800">
               <h3 className="text-xl font-bold mb-3 text-white">North America</h3>
               <ul className="space-y-2 text-gray-400">
-                <li>San Francisco (HQ)</li>
                 <li>New York</li>
                 <li>Chicago</li>
                 <li>Toronto</li>
@@ -198,6 +197,7 @@ export default function ContactPage() {
             <div className="bg-black p-6 rounded-lg shadow-md border border-gray-800">
               <h3 className="text-xl font-bold mb-3 text-white">Asia Pacific</h3>
               <ul className="space-y-2 text-gray-400">
+                <li>Gandhinagar (HQ)</li>
                 <li>Singapore</li>
                 <li>Tokyo</li>
                 <li>Sydney</li>
@@ -222,15 +222,15 @@ export default function ContactPage() {
         <div className="container-custom">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div>
-              <h2 className="text-2xl font-bold mb-2">Security Emergency?</h2>
-              <p className="text-emerald-100">Our incident response team is available 24/7/365.</p>
+              <h2 className="text-2xl font-bold mb-2">IT Emergency?</h2>
+              <p className="text-emerald-100">Our technical support team is available 24/7/365.</p>
             </div>
             <div className="mt-4 md:mt-0">
               <div className="flex items-center text-xl font-bold">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                Emergency Hotline: +1 (888) 911-CYBER
+                Emergency Hotline: +91 79 911-CYBER
               </div>
             </div>
           </div>

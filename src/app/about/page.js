@@ -1,38 +1,38 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'About Us | CyberShield Security Solutions',
-  description: 'Learn about CyberShield, our mission, values, and the team of cybersecurity experts protecting businesses worldwide.',
+  title: 'About Us | K-Infotech Global Consulting Services',
+  description: 'Learn about K-Infotech Global Consulting Services, our mission, values, and our team of IT and cybersecurity experts helping businesses with digital transformation.',
 };
 
 export default function AboutPage() {
   const teamMembers = [
     {
       id: 1,
-      name: 'Dr. Alexander Mitchell',
+      name: 'Rajesh Kumar',
       position: 'CEO & Founder',
-      bio: 'With over 20 years of experience in cybersecurity, Dr. Mitchell has led security teams at major tech companies before founding CyberShield. He holds a Ph.D. in Computer Science and multiple industry certifications.',
+      bio: 'With over 20 years of experience in IT and digital transformation, Rajesh has led technology teams at major global companies before founding K-Infotech. He holds an MBA and multiple industry certifications in IT management.',
       image: '/images/team-ceo.jpg'
     },
     {
       id: 2,
-      name: 'Sarah Thompson',
-      position: 'Chief Security Officer',
-      bio: 'Sarah brings 15+ years of experience in security operations and incident response. Previously, she led security programs at Fortune 500 companies and advised government agencies on cybersecurity strategy.',
+      name: 'Priya Sharma',
+      position: 'Chief Technology Officer',
+      bio: 'Priya brings 15+ years of experience in technology innovation and digital strategy. Previously, she led digital transformation initiatives at Fortune 500 companies and advised organizations on technology adoption.',
       image: '/images/team-cso.jpg'
     },
     {
       id: 3,
-      name: 'David Chen',
-      position: 'Head of Penetration Testing',
-      bio: 'David is a world-renowned ethical hacker who has discovered critical vulnerabilities in major systems. He leads our penetration testing team and develops cutting-edge testing methodologies.',
+      name: 'Amit Patel',
+      position: 'Head of Cybersecurity',
+      bio: 'Amit is a respected cybersecurity expert who has helped numerous organizations strengthen their security posture. He leads our cybersecurity team and develops comprehensive security frameworks for clients.',
       image: '/images/team-pentester.jpg'
     },
     {
       id: 4,
-      name: 'Jessica Patel',
-      position: 'Director of Security Consulting',
-      bio: 'Jessica specializes in helping organizations build robust security programs. With expertise in compliance frameworks and risk management, she ensures our clients implement effective security strategies.',
+      name: 'Neha Gupta',
+      position: 'Director of Consulting Services',
+      bio: 'Neha specializes in helping organizations navigate their digital transformation journeys. With expertise in IT strategy and business process optimization, she ensures our clients implement effective technology solutions.',
       image: '/images/team-consulting.jpg'
     }
   ];
@@ -43,9 +43,9 @@ export default function AboutPage() {
       <section className="bg-gradient-to-r from-black to-gray-900 text-white py-16">
         <div className="container-custom">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">About CyberShield</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">About K-Infotech</h1>
             <p className="text-xl text-gray-300">
-              Dedicated to protecting businesses from evolving cyber threats through expertise, innovation, and client-focused solutions.
+              A leading provider of innovative IT solutions, cybersecurity services, and digital transformation consulting.
             </p>
           </div>
         </div>
@@ -56,15 +56,15 @@ export default function AboutPage() {
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="section-heading text-white">Our Story</h2>
+              <h2 className="section-heading text-white">Who We Are</h2>
               <p className="text-lg text-gray-400 mb-6">
-                Founded in 2008, CyberShield emerged when Dr. Alexander Mitchell recognized the growing gap between evolving cyber threats and the security measures most businesses had in place. With a small team of security experts, he established CyberShield with a mission to provide enterprise-grade security solutions accessible to organizations of all sizes.
+                At K-Infotech Global Consulting Services, we are a leading provider of innovative IT solutions, cybersecurity services, and digital transformation consulting. With a rich history of excellence and a global presence, we specialize in delivering cutting-edge technology services to businesses of all sizes across various industries.
               </p>
               <p className="text-lg text-gray-400 mb-6">
-                Over the years, we've expanded from a small consulting firm to a comprehensive security provider with offices in 12 countries and a team of over 200 security professionals. Today, we protect the digital assets of more than 500 companies across various industries, from financial services and healthcare to retail and manufacturing.
+                Our team of highly skilled experts is dedicated to helping organizations navigate complex technological challenges, mitigate risks, and accelerate growth through tailored solutions. We help businesses adopt the latest technological trends to enhance operational efficiency, improve security, and achieve long-term sustainability.
               </p>
               <p className="text-lg text-gray-400">
-                What sets us apart is our unwavering commitment to staying ahead of emerging threats, our dedication to tailoring solutions to each client's unique needs, and our focus on building long-term partnerships that evolve with the changing security landscape.
+                What sets us apart is our expertise and experience, tailored solutions approach, commitment to excellence, and our global reach with local impact. We focus on building long-term partnerships that evolve with the changing technology landscape.
               </p>
             </div>
             <div className="relative">
@@ -72,11 +72,11 @@ export default function AboutPage() {
                 <h3 className="text-2xl font-bold mb-6">Our Mission & Vision</h3>
                 <div className="mb-8">
                   <h4 className="text-xl font-semibold mb-3 text-emerald-400">Mission</h4>
-                  <p className="text-gray-300">To empower organizations with the security tools, expertise, and confidence needed to thrive in an increasingly threatening digital landscape.</p>
+                  <p className="text-gray-300">Our mission is to empower businesses with the technology, expertise, and insights they need to achieve their goals and thrive in today's fast-paced digital world. We aim to provide comprehensive, innovative, and scalable IT solutions that ensure enhanced operational efficiency, improved security, and long-term sustainability.</p>
                 </div>
                 <div>
                   <h4 className="text-xl font-semibold mb-3 text-emerald-400">Vision</h4>
-                  <p className="text-gray-300">A world where businesses can innovate and grow without being constrained by cyber threats, supported by security solutions that are both powerful and accessible.</p>
+                  <p className="text-gray-300">We envision becoming the trusted partner for businesses worldwide by delivering innovative and impactful technology solutions that drive growth, efficiency, and success. We aspire to help our clients stay ahead of the technological curve, improve security, and achieve sustainable business performance.</p>
                 </div>
               </div>
               <div className="absolute top-0 right-0 w-full h-full bg-emerald-900 rounded-lg transform translate-x-4 translate-y-4 -z-10 opacity-50"></div>
@@ -98,7 +98,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-xl font-bold mb-3 text-white">Integrity</h3>
               <p className="text-gray-400">
-                We maintain the highest ethical standards in everything we do, building trust through transparent practices and honest communication.
+                We operate with honesty, transparency, and accountability in everything we do, ensuring trust and reliability in all our client relationships.
               </p>
             </div>
             <div className="bg-black p-8 rounded-lg shadow-md border border-gray-800">
@@ -109,7 +109,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-xl font-bold mb-3 text-white">Innovation</h3>
               <p className="text-gray-400">
-                We continuously explore new technologies and methodologies to stay ahead of evolving threats and deliver cutting-edge security solutions.
+                We continuously explore new ways to leverage technology and provide creative solutions to complex problems. Innovation drives us to improve both our internal operations and the outcomes we deliver to clients.
               </p>
             </div>
             <div className="bg-black p-8 rounded-lg shadow-md border border-gray-800">
@@ -118,9 +118,9 @@ export default function AboutPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold mb-3 text-white">Client Partnership</h3>
+              <h3 className="text-xl font-bold mb-3 text-white">Customer-Centricity</h3>
               <p className="text-gray-400">
-                We view ourselves as an extension of our clients' teams, focusing on their unique needs and building long-term relationships based on trust and mutual success.
+                Our clients are at the heart of everything we do. We prioritize their needs and work diligently to exceed their expectations, ensuring a high level of satisfaction in all our engagements.
               </p>
             </div>
           </div>
@@ -152,7 +152,7 @@ export default function AboutPage() {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Join Our Team</h2>
             <p className="text-xl text-emerald-100 mb-8">
-              We're always looking for talented individuals passionate about cybersecurity to join our growing team.
+              We're always looking for talented individuals passionate about IT, cybersecurity, and digital transformation to join our growing team.
             </p>
             <Link href="/careers" className="btn-secondary bg-transparent hover:bg-white text-white hover:text-emerald-700 border-white">
               View Open Positions

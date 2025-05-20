@@ -1,8 +1,8 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Blog | CyberShield Security Solutions',
-  description: 'Latest cybersecurity insights, trends, and best practices from our security experts.',
+  title: 'Blog | K-Infotech Global Consulting Services',
+  description: 'Latest IT, cybersecurity insights, trends, and best practices from our technology experts.',
 };
 
 const blogPosts = [
@@ -124,9 +124,9 @@ export default function BlogPage() {
       <section className="bg-gradient-to-r from-black to-gray-900 text-white py-16">
         <div className="container-custom">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Cybersecurity Insights</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Technology & Cybersecurity Insights</h1>
             <p className="text-xl text-gray-300">
-              Expert analysis, industry trends, and practical advice from our security professionals.
+              Expert analysis, industry trends, and practical advice from our IT and security professionals.
             </p>
           </div>
         </div>

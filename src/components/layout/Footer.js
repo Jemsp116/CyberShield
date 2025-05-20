@@ -14,9 +14,9 @@ const Footer = () => {
       <div className={`container-custom py-12 ${footerInView ? 'fade-in' : 'opacity-0'}`}>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4 text-emerald-500 glow-text">CyberShield</h3>
+            <h3 className="text-xl font-bold mb-4 text-emerald-500 glow-text">K-Infotech</h3>
             <p className="text-gray-400">
-              Protecting businesses from cyber threats with advanced security solutions.
+              Empowering businesses with innovative IT solutions, cybersecurity services, and digital transformation consulting.
             </p>
             <div className="mt-6 digital-scan">
               <div className="h-1 w-48 bg-gradient-to-r from-emerald-900 via-emerald-500 to-emerald-900 pulse-glow"></div>
@@ -73,7 +73,7 @@ const Footer = () => {
         
         <div className="border-t border-gray-800 mt-12 pt-8 text-sm text-gray-400">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p>&copy; {new Date().getFullYear()} CyberShield Security Solutions. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} K-Infotech Global Consulting Services. All rights reserved.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link href="/privacy" className="hover:text-emerald-500 hover:glow-text transition-colors">Privacy Policy</Link>
               <Link href="/terms" className="hover:text-emerald-500 hover:glow-text transition-colors">Terms of Service</Link>

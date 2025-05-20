@@ -8,21 +8,21 @@ const TestimonialsSection = () => {
   const testimonials = [
     {
       id: 1,
-      content: "CyberShield's penetration testing team uncovered critical vulnerabilities that our internal team missed. Their detailed remediation plan helped us strengthen our security posture significantly.",
+      content: "K-Infotech's cybersecurity team uncovered critical vulnerabilities that our internal team missed. Their detailed remediation plan helped us strengthen our security posture significantly.",
       author: "Sarah Johnson",
       position: "CIO, Nexus Financial",
       image: "/images/testimonial-1.jpg"
     },
     {
       id: 2,
-      content: "When we experienced a serious data breach, CyberShield's incident response team was on-site within hours. Their expertise and quick action minimized the damage and helped us recover fast.",
+      content: "When we experienced a serious data breach, K-Infotech's incident response team was on-site within hours. Their expertise and quick action minimized the damage and helped us recover fast.",
       author: "Michael Chen",
       position: "CISO, TechVantage Solutions",
       image: "/images/testimonial-2.jpg"
     },
     {
       id: 3,
-      content: "We've been working with CyberShield for over 5 years and they've consistently delivered exceptional security consulting services. They truly understand our business and provide tailored solutions.",
+      content: "We've been working with K-Infotech for over 5 years and they've consistently delivered exceptional IT and security consulting services. They truly understand our business and provide tailored solutions.",
       author: "Emily Rodriguez",
       position: "VP of IT, GlobalHealth Systems",
       image: "/images/testimonial-3.jpg"
@@ -43,7 +43,7 @@ const TestimonialsSection = () => {
         <div className="text-center mb-16">
           <h2 className="section-heading">What Our Clients Say</h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            We take pride in delivering exceptional cybersecurity services that exceed our clients' expectations.
+            We take pride in delivering exceptional IT solutions and cybersecurity services that exceed our clients' expectations.
           </p>
         </div>
         

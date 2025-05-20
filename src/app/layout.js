@@ -7,8 +7,8 @@ import AnimatedBackground from '@/components/layout/AnimatedBackground';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'CyberShield Security Solutions',
-  description: 'Advanced cybersecurity solutions to protect your business from evolving digital threats.',
+  title: 'K-Infotech Global Consulting Services',
+  description: 'Innovative IT solutions, cybersecurity services, and digital transformation consulting for businesses of all sizes.',
 };
 
 export default function RootLayout({ children }) {

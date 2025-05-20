@@ -57,7 +57,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
-              <span className="font-bold text-2xl text-emerald-500 glow-text">CyberShield</span>
+              <span className="font-bold text-2xl text-emerald-500 glow-text">K-Infotech</span>
             </Link>
           </div>
 
@@ -89,9 +89,9 @@ const Navbar = () => {
                   <Link href="/about/mission" className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-emerald-500">
                     Mission & Vision
                   </Link>
-                  <Link href="/careers" className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-emerald-500">
+                  {/* <Link href="/careers" className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-emerald-500">
                     Careers
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </div>

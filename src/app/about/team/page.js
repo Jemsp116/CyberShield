@@ -1,65 +1,65 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Our Team | CyberShield Security Solutions',
-  description: 'Meet the team of cybersecurity experts at CyberShield working to protect your business from emerging threats.',
+  title: 'Our Team | K-Infotech Global Consulting Services',
+  description: 'Meet the team of IT and cybersecurity experts at K-Infotech working to help businesses with digital transformation and security.',
 };
 
 export default function TeamPage() {
   const teamMembers = [
     {
       id: 1,
-      name: 'Dr. Alexander Mitchell',
+      name: 'Rajesh Kumar',
       position: 'CEO & Founder',
-      bio: 'With over 20 years of experience in cybersecurity, Dr. Mitchell has led security teams at major tech companies before founding CyberShield. He holds a Ph.D. in Computer Science and multiple industry certifications.',
+      bio: 'With over 20 years of experience in IT and digital transformation, Rajesh has led technology teams at major global companies before founding K-Infotech. He holds an MBA and multiple industry certifications in IT management.',
       image: '/images/team-ceo.jpg',
-      expertise: ['Security Strategy', 'Enterprise Architecture', 'Risk Management'],
-      certifications: ['CISSP', 'CISM', 'Ph.D. Computer Science']
+      expertise: ['IT Strategy', 'Digital Transformation', 'Business Leadership'],
+      certifications: ['MBA', 'PMP', 'ITIL Expert']
     },
     {
       id: 2,
-      name: 'Sarah Thompson',
-      position: 'Chief Security Officer',
-      bio: 'Sarah brings 15+ years of experience in security operations and incident response. Previously, she led security programs at Fortune 500 companies and advised government agencies on cybersecurity strategy.',
+      name: 'Priya Sharma',
+      position: 'Chief Technology Officer',
+      bio: 'Priya brings 15+ years of experience in technology innovation and digital strategy. Previously, she led digital transformation initiatives at Fortune 500 companies and advised organizations on technology adoption.',
       image: '/images/team-cso.jpg',
-      expertise: ['Incident Response', 'Security Operations', 'Threat Intelligence'],
-      certifications: ['CISSP', 'GIAC', 'CISM']
+      expertise: ['Cloud Architecture', 'Technology Strategy', 'Enterprise Solutions'],
+      certifications: ['AWS Solutions Architect', 'Azure Solutions Expert', 'Google Cloud Professional']
     },
     {
       id: 3,
-      name: 'David Chen',
-      position: 'Head of Penetration Testing',
-      bio: 'David is a world-renowned ethical hacker who has discovered critical vulnerabilities in major systems. He leads our penetration testing team and develops cutting-edge testing methodologies.',
+      name: 'Amit Patel',
+      position: 'Head of Cybersecurity',
+      bio: 'Amit is a respected cybersecurity expert who has helped numerous organizations strengthen their security posture. He leads our cybersecurity team and develops comprehensive security frameworks for clients.',
       image: '/images/team-pentester.jpg',
-      expertise: ['Penetration Testing', 'Vulnerability Research', 'Exploit Development'],
-      certifications: ['OSCP', 'CEH', 'GXPN']
+      expertise: ['Security Architecture', 'Threat Management', 'Compliance'],
+      certifications: ['CISSP', 'CEH', 'CISM']
     },
     {
       id: 4,
-      name: 'Jessica Patel',
-      position: 'Director of Security Consulting',
-      bio: 'Jessica specializes in helping organizations build robust security programs. With expertise in compliance frameworks and risk management, she ensures our clients implement effective security strategies.',
+      name: 'Neha Gupta',
+      position: 'Director of Consulting Services',
+      bio: 'Neha specializes in helping organizations navigate their digital transformation journeys. With expertise in IT strategy and business process optimization, she ensures our clients implement effective technology solutions.',
       image: '/images/team-consulting.jpg',
-      expertise: ['Security Compliance', 'GRC', 'Security Program Development'],
-      certifications: ['CISA', 'CRISC', 'PMP']
+      expertise: ['IT Consulting', 'Process Optimization', 'Change Management'],
+      certifications: ['PMP', 'ITIL', 'Six Sigma Black Belt']
     },
     {
       id: 5,
-      name: 'Marcus Williams',
-      position: 'Chief Technology Officer',
-      bio: 'Marcus oversees the development of our security technologies and platforms. With a background in both software development and cybersecurity, he bridges the gap between innovative technology and practical security solutions.',
+      name: 'Vikram Singh',
+      position: 'Head of Cloud Services',
+      bio: 'Vikram oversees our cloud services division, helping clients migrate to and optimize their cloud environments. With deep expertise in multi-cloud architectures, he ensures scalable, secure, and cost-effective cloud solutions.',
       image: '/images/team-cto.jpg',
-      expertise: ['Security Architecture', 'Cloud Security', 'DevSecOps'],
-      certifications: ['AWS Solutions Architect', 'CCSP', 'Azure Security Engineer']
+      expertise: ['Cloud Migration', 'Multi-cloud Strategy', 'Cloud Security'],
+      certifications: ['AWS Solutions Architect', 'Azure Administrator', 'GCP Professional']
     },
     {
       id: 6,
-      name: 'Emma Rodriguez',
-      position: 'Incident Response Manager',
-      bio: 'Emma leads our incident response team, handling critical security breaches and helping clients recover from cyberattacks. Her quick thinking and methodical approach have saved numerous organizations from devastating breaches.',
+      name: 'Ananya Desai',
+      position: 'Director of Digital Innovation',
+      bio: 'Ananya leads our digital innovation initiatives, focusing on emerging technologies like AI, IoT, and blockchain. Her forward-thinking approach helps clients leverage cutting-edge technologies for business advantage.',
       image: '/images/team-ir.jpg',
-      expertise: ['Digital Forensics', 'Malware Analysis', 'Crisis Management'],
-      certifications: ['GCFA', 'EnCE', 'GCIH']
+      expertise: ['AI/ML Implementation', 'IoT Solutions', 'Blockchain'],
+      certifications: ['AI Professional', 'IoT Specialist', 'Digital Transformation Leader']
     }
   ];
 
@@ -71,7 +71,7 @@ export default function TeamPage() {
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Team</h1>
             <p className="text-xl text-gray-300">
-              Meet the cybersecurity experts behind CyberShield's innovative security solutions.
+              Meet the IT and cybersecurity experts behind K-Infotech's innovative technology solutions.
             </p>
           </div>
         </div>
@@ -125,13 +125,13 @@ export default function TeamPage() {
             <div>
               <h2 className="section-heading text-white">Our Culture</h2>
               <p className="text-lg text-gray-400 mb-6">
-                At CyberShield, we foster a culture of continuous learning, collaboration, and innovation. We believe that the best security solutions come from diverse perspectives and a shared commitment to excellence.
+                At K-Infotech, we foster a culture of continuous learning, collaboration, and innovation. We believe that the best technology solutions come from diverse perspectives and a shared commitment to excellence.
               </p>
               <p className="text-lg text-gray-400 mb-6">
-                Our team members are encouraged to pursue their passions, develop new skills, and challenge conventional thinking. We invest heavily in professional development, research, and creating an environment where cybersecurity professionals can thrive.
+                Our team members are encouraged to pursue their passions, develop new skills, and challenge conventional thinking. We invest heavily in professional development, research, and creating an environment where IT and cybersecurity professionals can thrive.
               </p>
               <p className="text-lg text-gray-400">
-                Beyond our technical expertise, we value integrity, client focus, and making a positive impact in the cybersecurity community through mentorship, education, and contributing to open-source security projects.
+                Beyond our technical expertise, we value integrity, client focus, and making a positive impact in the technology community through mentorship, education, and contributing to innovative IT and security initiatives.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-4">
@@ -150,7 +150,7 @@ export default function TeamPage() {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Join Our Team</h2>
             <p className="text-xl text-emerald-100 mb-8">
-              We're always looking for talented individuals passionate about cybersecurity to join our growing team.
+              We're always looking for talented individuals passionate about IT, cybersecurity, and digital transformation to join our growing team.
             </p>
             <Link href="/careers" className="btn-secondary bg-transparent hover:bg-white text-white hover:text-emerald-700 border-white">
               View Open Positions

@@ -8,14 +8,14 @@ const AboutPreview = () => {
       <div className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="section-heading">Leaders in Cybersecurity Excellence</h2>
+            <h2 className="section-heading">Leaders in IT & Cybersecurity Excellence</h2>
             <p className="text-lg text-gray-400 mb-6">
-              At CyberShield, we've been at the forefront of cybersecurity innovation for over 15 years, 
-              protecting businesses of all sizes from increasingly sophisticated cyber threats.
+              At K-Infotech, we've been at the forefront of IT innovation and cybersecurity for over 15 years, 
+              helping businesses of all sizes transform digitally and protect against sophisticated cyber threats.
             </p>
             <p className="text-lg text-gray-400 mb-6">
-              Our team of certified security experts brings decades of combined experience from various industries,
-              allowing us to deliver tailored security solutions that address your specific challenges.
+              Our team of certified IT and security experts brings decades of combined experience from various industries,
+              allowing us to deliver tailored technology solutions that address your specific business challenges.
             </p>
             
             <div className="grid grid-cols-2 gap-6 mb-8">
@@ -25,7 +25,7 @@ const AboutPreview = () => {
               </div>
               <div className="cyber-card">
                 <div className="text-3xl font-bold text-emerald-500 mb-2">200+</div>
-                <div className="text-gray-400">Security Experts</div>
+                <div className="text-gray-400">IT Professionals</div>
               </div>
               <div className="cyber-card">
                 <div className="text-3xl font-bold text-emerald-500 mb-2">5000+</div>
@@ -48,8 +48,8 @@ const AboutPreview = () => {
                 <div className="p-8 bg-gradient-to-br from-gray-900 to-black text-white h-full flex flex-col justify-center border border-gray-800">
                   <h3 className="text-2xl font-bold mb-4 text-emerald-500">Our Mission</h3>
                   <p className="mb-6 text-gray-300">
-                    To empower organizations with the security tools, expertise, and confidence needed to 
-                    thrive in an increasingly threatening digital landscape.
+                    To empower businesses with the technology, expertise, and insights they need to achieve their goals 
+                    and thrive in today's fast-paced digital world.
                   </p>
                   <div className="border-t border-gray-700 pt-6">
                     <h4 className="text-xl font-bold mb-3 text-white">Our Values</h4>

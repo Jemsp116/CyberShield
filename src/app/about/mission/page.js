@@ -1,62 +1,62 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Mission & Vision | CyberShield Security Solutions',
-  description: 'Learn about CyberShield\'s mission and vision for cybersecurity and how we work to create a safer digital world for all businesses.',
+  title: 'Mission & Vision | K-Infotech Global Consulting Services',
+  description: 'Learn about K-Infotech\'s mission and vision for IT solutions, cybersecurity, and digital transformation to help businesses thrive in the digital era.',
 };
 
 export default function MissionPage() {
   const milestones = [
     {
-      year: '2008',
-      title: 'Founded',
-      description: 'CyberShield was founded by Dr. Alexander Mitchell with a small team of security experts in response to growing cybersecurity challenges.'
-    },
-    {
       year: '2010',
-      title: 'First Major Client',
-      description: 'Secured our first Fortune 500 client, validating our approach to enterprise security solutions.'
+      title: 'Founded',
+      description: 'K-Infotech was founded by Rajesh Kumar with a small team of IT experts to provide innovative technology solutions to businesses.'
     },
     {
       year: '2012',
-      title: 'International Expansion',
-      description: 'Opened our first international office in London, beginning our global expansion.'
+      title: 'First Major Client',
+      description: 'Secured our first enterprise client, validating our approach to comprehensive IT solutions and consulting services.'
     },
     {
-      year: '2015',
-      title: 'Security Platform Launch',
-      description: 'Launched our proprietary security monitoring and management platform, enhancing our service offerings.'
+      year: '2014',
+      title: 'Cybersecurity Division',
+      description: 'Established our dedicated cybersecurity division to address growing digital security challenges for our clients.'
+    },
+    {
+      year: '2016',
+      title: 'Digital Transformation Practice',
+      description: 'Launched our digital transformation practice to help businesses modernize their operations and technology stack.'
     },
     {
       year: '2018',
-      title: 'Cybersecurity Excellence Award',
-      description: 'Recognized with the Cybersecurity Excellence Award for our innovative approach to threat detection.'
+      title: 'IT Excellence Award',
+      description: 'Recognized with the IT Excellence Award for our innovative approach to business technology solutions.'
     },
     {
       year: '2021',
       title: '500th Client',
-      description: 'Reached the milestone of protecting 500 businesses worldwide with our cybersecurity solutions.'
+      description: 'Reached the milestone of serving 500 businesses worldwide with our IT and cybersecurity solutions.'
     },
     {
       year: '2023',
-      title: 'AI Security Division',
-      description: 'Established a dedicated AI security division to address emerging threats in artificial intelligence.'
+      title: 'Cloud & AI Division',
+      description: 'Established a dedicated Cloud & AI division to help businesses leverage advanced technologies for growth and innovation.'
     }
   ];
 
   const principles = [
     {
-      title: 'Proactive Protection',
-      description: 'We believe in anticipating threats before they materialize, staying ahead of attackers through continuous research and innovation.',
+      title: 'Innovation',
+      description: 'We continuously explore new ways to leverage technology and provide creative solutions to complex problems, staying ahead through research and innovation.',
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
         </svg>
       )
     },
     {
-      title: 'Client Partnership',
-      description: 'Security is a journey, not a destination. We partner closely with clients to continuously evolve their security posture as threats change.',
+      title: 'Customer-Centricity',
+      description: 'Our clients are at the heart of everything we do. We prioritize their needs and work diligently to exceed their expectations in all our engagements.',
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
@@ -64,20 +64,20 @@ export default function MissionPage() {
       )
     },
     {
-      title: 'Democratizing Security',
-      description: 'We believe robust cybersecurity should be accessible to organizations of all sizes, not just those with the largest budgets.',
+      title: 'Integrity',
+      description: 'We operate with honesty, transparency, and accountability in everything we do, ensuring trust and reliability in all our client relationships.',
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
         </svg>
       )
     },
     {
-      title: 'Knowledge Sharing',
-      description: 'We contribute to the security community through research, education, and open-source tools to collectively enhance cybersecurity for all.',
+      title: 'Collaboration',
+      description: 'We believe in the power of teamwork—not only within our company but also in collaboration with our clients. By working together, we drive positive outcomes.',
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
         </svg>
       )
     }
@@ -110,10 +110,10 @@ export default function MissionPage() {
                 </div>
                 <h2 className="text-3xl font-bold mb-6 text-white">Our Mission</h2>
                 <p className="text-lg text-gray-400 mb-6">
-                  To empower organizations with the security tools, expertise, and confidence needed to thrive in an increasingly threatening digital landscape.
+                  Our mission is to empower businesses with the technology, expertise, and insights they need to achieve their goals and thrive in today's fast-paced digital world.
                 </p>
                 <p className="text-lg text-gray-400">
-                  We achieve this by delivering innovative cybersecurity solutions that protect critical assets, enable secure business operations, and build resilience against evolving threats.
+                  We aim to provide comprehensive, innovative, and scalable IT solutions that ensure enhanced operational efficiency, improved security, and long-term sustainability. By aligning technology with business goals, we enable companies to stay competitive and successful in an increasingly digital landscape.
                 </p>
               </div>
             </div>
@@ -127,10 +127,10 @@ export default function MissionPage() {
                 </div>
                 <h2 className="text-3xl font-bold mb-6 text-white">Our Vision</h2>
                 <p className="text-lg text-gray-400 mb-6">
-                  A world where businesses can innovate and grow without being constrained by cyber threats, supported by security solutions that are both powerful and accessible.
+                  We envision becoming the trusted partner for businesses worldwide by delivering innovative and impactful technology solutions that drive growth, efficiency, and success.
                 </p>
                 <p className="text-lg text-gray-400">
-                  We envision a future where organizations of all sizes have access to enterprise-grade security, allowing them to focus on their core mission while we safeguard their digital assets.
+                  We aspire to help our clients stay ahead of the technological curve, improve security, and achieve sustainable business performance by embracing the latest trends and advancements in IT, cybersecurity, and digital transformation.
                 </p>
               </div>
             </div>
@@ -141,7 +141,7 @@ export default function MissionPage() {
       {/* Guiding Principles */}
       <section className="py-16 bg-gray-900">
         <div className="container-custom">
-          <h2 className="section-heading text-center mb-12 text-white">Our Guiding Principles</h2>
+          <h2 className="section-heading text-center mb-12 text-white">Our Core Values</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {principles.map((principle, index) => (
               <div key={index} className="bg-black p-6 rounded-lg border border-gray-800">
@@ -160,42 +160,7 @@ export default function MissionPage() {
         </div>
       </section>
 
-      {/* Our Journey Timeline */}
-      <section className="py-16">
-        <div className="container-custom">
-          <h2 className="section-heading text-center mb-12 text-white">Our Journey</h2>
-          
-          <div className="relative">
-            {/* Timeline Line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gray-800" aria-hidden="true"></div>
-            
-            <div className="space-y-12">
-              {milestones.map((milestone, index) => (
-                <div key={index} className={`relative flex ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
-                  {/* Timeline Point */}
-                  <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-4 flex items-center justify-center">
-                    <div className="h-8 w-8 rounded-full bg-emerald-600 border-4 border-black"></div>
-                  </div>
-                  
-                  {/* Content */}
-                  <div className={`flex-1 ${index % 2 === 0 ? 'md:mr-12 md:text-right' : 'md:ml-12'}`}>
-                    <div className="cyber-card border border-gray-800">
-                      <div className="p-6">
-                        <span className="text-emerald-500 font-bold block mb-2">{milestone.year}</span>
-                        <h3 className="text-xl font-bold mb-3 text-white">{milestone.title}</h3>
-                        <p className="text-gray-400">{milestone.description}</p>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  {/* Spacer for alternating layout */}
-                  <div className="flex-1 hidden md:block"></div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+     
 
       {/* Call to Action */}
       <section className="py-16 bg-gradient-to-r from-emerald-900 to-emerald-800 text-white">
@@ -203,7 +168,7 @@ export default function MissionPage() {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Join Us in Our Mission</h2>
             <p className="text-xl text-emerald-100 mb-8">
-              Partner with CyberShield to protect your business and become part of our vision for a secure digital future.
+              Partner with K-Infotech to transform your business and become part of our vision for a successful digital future.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link href="/contact" className="btn-secondary bg-transparent hover:bg-white text-white hover:text-emerald-700 border-white">

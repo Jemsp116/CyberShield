@@ -1,94 +1,94 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Careers | CyberShield Security Solutions',
-  description: 'Join our team of cybersecurity experts and help build a safer digital world. View open positions and learn about working at CyberShield.',
+  title: 'Careers | K-Infotech Global Consulting Services',
+  description: 'Join our team of IT and cybersecurity experts and help businesses with digital transformation. View open positions and learn about working at K-Infotech.',
 };
 
 export default function CareersPage() {
   const jobOpenings = [
     {
       id: 1,
-      title: 'Senior Penetration Tester',
-      location: 'New York, NY (Hybrid)',
-      department: 'Security Operations',
-      description: 'We are seeking an experienced penetration tester to join our offensive security team. In this role, you will conduct thorough penetration tests against client infrastructure, web applications, and cloud environments.',
+      title: 'Senior Cybersecurity Consultant',
+      location: 'Gandhinagar, Gujarat (Hybrid)',
+      department: 'Cybersecurity Solutions',
+      description: 'We are seeking an experienced cybersecurity consultant to join our security team. In this role, you will help clients assess their security posture, implement robust security measures, and protect their digital assets from emerging threats.',
       requirements: [
-        'Minimum 5 years of experience in penetration testing or ethical hacking',
-        'Proficiency with industry-standard penetration testing tools',
-        'Experience with web application security testing',
-        'Strong understanding of network security principles',
-        'Excellent communication skills for report writing and client presentations'
+        'Minimum 5 years of experience in cybersecurity consulting',
+        'Proficiency with security assessment methodologies and tools',
+        'Experience with security architecture and implementation',
+        'Strong understanding of compliance frameworks (ISO 27001, GDPR, etc.)',
+        'Excellent communication skills for client presentations and reporting'
       ]
     },
     {
       id: 2,
-      title: 'Incident Response Analyst',
-      location: 'Chicago, IL (On-site)',
-      department: 'Incident Response',
-      description: 'Join our Incident Response team to help clients detect, respond to, and recover from security breaches. You will work on the frontlines of cybersecurity, handling real-world incidents and helping organizations recover from attacks.',
+      title: 'Digital Transformation Specialist',
+      location: 'Mumbai, Maharashtra (Hybrid)',
+      department: 'Digital Transformation',
+      description: 'Join our Digital Transformation team to help clients modernize their business processes and technology stack. You will work with organizations to develop and implement strategies that leverage digital technologies to improve operations and customer experiences.',
       requirements: [
-        'Experience in incident handling and digital forensics',
-        'Knowledge of threat hunting and malware analysis',
-        'Familiarity with SIEM platforms and log analysis',
-        'Strong problem-solving abilities and ability to work under pressure',
-        'Available for occasional on-call rotations and travel'
+        'Experience in digital transformation projects and change management',
+        'Knowledge of business process optimization and automation',
+        'Familiarity with modern technology stacks and cloud platforms',
+        'Strong problem-solving abilities and strategic thinking',
+        'Excellent client relationship management skills'
       ]
     },
     {
       id: 3,
-      title: 'Security Consultant',
-      location: 'Remote (US-based)',
-      department: 'Advisory Services',
-      description: 'As a Security Consultant, you will help our clients build robust security programs, conduct risk assessments, and develop security strategies tailored to their business needs.',
+      title: 'IT Strategy Consultant',
+      location: 'Remote (India-based)',
+      department: 'IT Strategy & Consulting',
+      description: 'As an IT Strategy Consultant, you will help our clients align their technology initiatives with business objectives, develop IT roadmaps, and optimize their technology investments for maximum business value.',
       requirements: [
-        'Experience in security program development and implementation',
-        'Knowledge of security frameworks (NIST, ISO 27001, etc.)',
+        'Experience in IT strategy development and implementation',
+        'Knowledge of enterprise architecture frameworks',
         'Strong consulting and client management skills',
         'Excellent verbal and written communication',
-        'Ability to translate complex security concepts for non-technical audiences'
+        'Ability to translate complex technical concepts for business audiences'
       ]
     },
     {
       id: 4,
-      title: 'Cloud Security Engineer',
-      location: 'San Francisco, CA (Hybrid)',
-      department: 'Cloud Security',
-      description: 'Help our clients secure their cloud environments across major platforms including AWS, Azure, and GCP. You will design secure cloud architectures, conduct security reviews, and implement cloud security controls.',
+      title: 'Cloud Solutions Architect',
+      location: 'Bangalore, Karnataka (Hybrid)',
+      department: 'Cloud Services',
+      description: 'Help our clients design and implement cloud solutions across major platforms including AWS, Azure, and GCP. You will architect scalable, secure, and cost-effective cloud environments that meet business requirements.',
       requirements: [
-        'Hands-on experience securing AWS, Azure, or GCP environments',
-        'Knowledge of cloud security best practices and services',
+        'Hands-on experience with AWS, Azure, or GCP cloud platforms',
+        'Knowledge of cloud architecture best practices',
         'Experience with Infrastructure as Code (Terraform, CloudFormation)',
-        'Understanding of DevSecOps principles',
-        'Relevant cloud certifications preferred (AWS Security, Azure Security, etc.)'
+        'Understanding of DevOps principles',
+        'Relevant cloud certifications preferred (AWS Solutions Architect, Azure Architect, etc.)'
       ]
     },
     {
       id: 5,
-      title: 'Security Operations Center (SOC) Analyst',
-      location: 'London, UK (On-site)',
-      department: 'Managed Security Services',
-      description: 'Join our 24/7 Security Operations Center to monitor, detect, and respond to security threats across our clients\' environments. You will be part of a team that provides continuous security monitoring and incident response.',
+      title: 'Managed IT Services Specialist',
+      location: 'Delhi NCR (On-site)',
+      department: 'Managed IT Services',
+      description: 'Join our Managed IT Services team to provide ongoing support and management of client IT infrastructure. You will be part of a team that ensures clients\' systems are operating efficiently, securely, and with minimal downtime.',
       requirements: [
-        'Experience with SIEM platforms and security monitoring tools',
-        'Understanding of common attack techniques and indicators of compromise',
-        'Ability to work in shifts (including nights and weekends)',
+        'Experience with IT service management and support',
+        'Understanding of network infrastructure and system administration',
+        'Familiarity with monitoring tools and incident management',
         'Strong analytical skills and attention to detail',
-        'Knowledge of network and system security concepts'
+        'ITIL certification preferred'
       ]
     },
     {
       id: 6,
-      title: 'AI Security Researcher',
-      location: 'Boston, MA (Hybrid)',
-      department: 'Research & Development',
-      description: 'Be part of our cutting-edge research team focused on AI security. You will research security implications of machine learning systems, develop methodologies for securing AI applications, and contribute to industry knowledge.',
+      title: 'Data Analytics Consultant',
+      location: 'Pune, Maharashtra (Hybrid)',
+      department: 'Data & Analytics',
+      description: 'Be part of our data analytics team helping clients leverage their data assets for business insights. You will design and implement data solutions that enable clients to make data-driven decisions and gain competitive advantages.',
       requirements: [
-        'Background in both cybersecurity and machine learning/AI',
-        'Experience with AI security challenges (adversarial attacks, model security, etc.)',
-        'Research experience and publication record preferred',
-        'Programming skills in Python and frameworks like TensorFlow or PyTorch',
-        'Passion for exploring emerging security challenges in AI'
+        'Background in data analytics, business intelligence, or data science',
+        'Experience with data visualization tools (Power BI, Tableau, etc.)',
+        'Knowledge of data warehousing concepts and technologies',
+        'Programming skills in Python, R, or SQL',
+        'Ability to translate business questions into analytical frameworks'
       ]
     }
   ];
@@ -142,7 +142,7 @@ export default function CareersPage() {
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Join Our Team</h1>
             <p className="text-xl text-gray-300">
-              Build your career at the forefront of cybersecurity, protecting businesses worldwide from emerging threats.
+              Build your career at the forefront of IT innovation, helping businesses transform digitally and navigate technological challenges.
             </p>
           </div>
         </div>
@@ -153,21 +153,21 @@ export default function CareersPage() {
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="section-heading text-white">Why Join CyberShield</h2>
+              <h2 className="section-heading text-white">Why Join K-Infotech</h2>
               <p className="text-lg text-gray-400 mb-6">
-                At CyberShield, we're not just cybersecurity professionals – we're a team of passionate individuals committed to making the digital world safer for everyone. 
+                At K-Infotech Global Consulting Services, we're not just IT professionals – we're a team of passionate innovators committed to helping businesses thrive in the digital era. 
               </p>
               <p className="text-lg text-gray-400 mb-6">
-                Working here means tackling some of the most challenging security problems alongside industry experts, using cutting-edge technologies, and continuously expanding your skills and knowledge.
+                Working here means tackling diverse technological challenges alongside industry experts, implementing cutting-edge solutions, and continuously expanding your skills across IT, cybersecurity, and digital transformation.
               </p>
               <p className="text-lg text-gray-400">
-                We foster a culture of innovation, collaboration, and continuous learning, where your ideas are valued and you can make a real impact on our clients and the security community.
+                We foster a culture of innovation, collaboration, and continuous learning, where your ideas are valued and you can make a real impact on our clients' business success and technological advancement.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-6">
               <div className="bg-gray-900 rounded-lg p-6 border border-gray-800">
                 <div className="text-3xl font-bold mb-2 text-emerald-500">200+</div>
-                <div className="text-gray-400">Security Professionals</div>
+                <div className="text-gray-400">IT Professionals</div>
               </div>
               <div className="bg-gray-900 rounded-lg p-6 border border-gray-800">
                 <div className="text-3xl font-bold mb-2 text-emerald-500">12</div>
@@ -213,7 +213,7 @@ export default function CareersPage() {
         <div className="container-custom">
           <h2 className="section-heading text-center mb-4 text-white">Open Positions</h2>
           <p className="text-center text-gray-400 max-w-3xl mx-auto mb-12">
-            Explore our current job openings and find a role where you can grow your skills and make an impact in the cybersecurity industry.
+            Explore our current job openings and find a role where you can grow your skills and make an impact in the IT and digital transformation space.
           </p>
           
           <div className="space-y-6">
