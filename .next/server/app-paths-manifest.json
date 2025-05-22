@@ -1,3 +1,4 @@
 {
+  "/services/digital-forensic/page": "app/services/digital-forensic/page.js",
   "/services/cyber-resilience/page": "app/services/cyber-resilience/page.js"
 }
