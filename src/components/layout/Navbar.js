@@ -2,11 +2,13 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import ServiceModal from '../ui/ServiceModal';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [scrolled, setScrolled] = useState(false);
+  const [activeModal, setActiveModal] = useState(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,17 +37,25 @@ const Navbar = () => {
       setActiveDropdown(index);
     }
   };
+  
+  const openModal = (modalName) => {
+    setActiveModal(modalName);
+  };
+  
+  const closeModal = () => {
+    setActiveModal(null);
+  };
 
   const serviceDropdownItems = [
     { 
       title: 'Managed SOC as a Service', 
       href: '/services/managed-soc',
       subItems: [
-        { title: '24/7 Threat Monitoring and Detection', href: '/services/managed-soc#monitoring' },
-        { title: 'SOC Deployment and Monitoring', href: '/services/managed-soc#deployment' },
-        { title: 'Incident Response and Mitigation', href: '/services/managed-soc#response' },
-        { title: 'Log Management and Analysis', href: '/services/managed-soc#log-management' },
-        { title: 'MDR, EDR, XDR, SOAR', href: '/services/managed-soc#advanced-solutions' }
+        { title: '24/7 Threat Monitoring and Detection', href: '/services/managed-soc' },
+        { title: 'SOC Deployment and Monitoring', href: '/services/managed-soc' },
+        { title: 'Incident Response and Mitigation', href: '/services/managed-soc' },
+        { title: 'Log Management and Analysis', href: '/services/managed-soc' },
+        { title: 'MDR, EDR, XDR, SOAR', href: '/services/managed-soc' }
       ]
     },
     { 
@@ -90,9 +100,157 @@ const Navbar = () => {
     { title: 'Network Protection', href: '/solutions/network-protection' },
     { title: 'Compliance Solutions', href: '/solutions/compliance-solutions' }
   ];
+  
+  // Modal content for services
+  const modalContent = {
+    'penetration-testing': (
+      <div className="space-y-6">
+        <p className="text-gray-300 leading-relaxed">
+          Our comprehensive Penetration Testing services help identify vulnerabilities in your systems before malicious actors can exploit them.
+        </p>
+        
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
+            <h3 className="text-xl font-semibold text-emerald-500 mb-3">Red Teaming</h3>
+            <p className="text-gray-300">Advanced simulated attacks that test your organization's detection and response capabilities using real-world tactics.</p>
+          </div>
+          
+          <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
+            <h3 className="text-xl font-semibold text-emerald-500 mb-3">WEB Application Testing</h3>
+            <p className="text-gray-300">Thorough assessment of web applications to identify security flaws, including OWASP Top 10 vulnerabilities.</p>
+          </div>
+          
+          <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
+            <h3 className="text-xl font-semibold text-emerald-500 mb-3">Network Penetration Testing</h3>
+            <p className="text-gray-300">Comprehensive evaluation of network infrastructure to identify and exploit security weaknesses.</p>
+          </div>
+          
+          <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
+            <h3 className="text-xl font-semibold text-emerald-500 mb-3">Mobile App Testing</h3>
+            <p className="text-gray-300">Security assessment of mobile applications across iOS and Android platforms to identify vulnerabilities.</p>
+          </div>
+          
+          <div className="bg-gray-800 p-5 rounded-lg border border-gray-700 md:col-span-2">
+            <h3 className="text-xl font-semibold text-emerald-500 mb-3">Cloud Penetration Service</h3>
+            <p className="text-gray-300">Specialized testing for cloud environments including AWS, Azure, and Google Cloud to identify misconfigurations and security gaps.</p>
+          </div>
+        </div>
+        
+        <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
+          <h3 className="text-xl font-semibold text-emerald-500 mb-3">Our Methodology</h3>
+          <ol className="list-decimal pl-5 space-y-2 text-gray-300">
+            <li>Initial reconnaissance and planning</li>
+            <li>Vulnerability scanning and identification</li>
+            <li>Manual exploitation and privilege escalation</li>
+            <li>Post-exploitation analysis</li>
+            <li>Detailed reporting with remediation recommendations</li>
+          </ol>
+        </div>
+      </div>
+    ),
+    
+    'cyber-resilience': (
+      <div className="space-y-6">
+        <p className="text-gray-300 leading-relaxed">
+          Our Cyber Resilience Services help organizations build robust security postures that can withstand, respond to, and recover from cyber threats.
+        </p>
+        
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
+            <h3 className="text-xl font-semibold text-emerald-500 mb-3">Risk Assessment and Management</h3>
+            <p className="text-gray-300">Comprehensive evaluation of your organization's security risks with actionable mitigation strategies.</p>
+          </div>
+          
+          <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
+            <h3 className="text-xl font-semibold text-emerald-500 mb-3">Cloud Security and Disaster Recovery</h3>
+            <p className="text-gray-300">Secure cloud implementations with robust disaster recovery planning to ensure business continuity.</p>
+          </div>
+          
+          <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
+            <h3 className="text-xl font-semibold text-emerald-500 mb-3">Data Protection and Backup Solutions</h3>
+            <p className="text-gray-300">Comprehensive data protection strategies including encryption, access controls, and secure backup solutions.</p>
+          </div>
+          
+          <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
+            <h3 className="text-xl font-semibold text-emerald-500 mb-3">Advanced Threat Detection</h3>
+            <p className="text-gray-300">Implementation of cutting-edge threat detection technologies to identify and respond to sophisticated attacks.</p>
+          </div>
+          
+          <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
+            <h3 className="text-xl font-semibold text-emerald-500 mb-3">Virtual CISO</h3>
+            <p className="text-gray-300">Expert security leadership without the cost of a full-time executive, providing strategic guidance and oversight.</p>
+          </div>
+          
+          <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
+            <h3 className="text-xl font-semibold text-emerald-500 mb-3">IAM/PAM as a Service</h3>
+            <p className="text-gray-300">Managed identity and access management solutions to control and monitor user access across your organization.</p>
+          </div>
+        </div>
+        
+        <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
+          <h3 className="text-xl font-semibold text-emerald-500 mb-3">Benefits</h3>
+          <ul className="list-disc pl-5 space-y-2 text-gray-300">
+            <li>Improved security posture and reduced risk exposure</li>
+            <li>Enhanced ability to detect and respond to threats</li>
+            <li>Minimized downtime and business disruption</li>
+            <li>Compliance with regulatory requirements</li>
+            <li>Cost-effective security solutions tailored to your needs</li>
+          </ul>
+        </div>
+      </div>
+    ),
+    
+    'digital-forensic': (
+      <div className="space-y-6">
+        <p className="text-gray-300 leading-relaxed">
+          Our Digital Forensic services provide expert investigation capabilities to analyze security incidents, collect evidence, and support legal proceedings.
+        </p>
+        
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
+            <h3 className="text-xl font-semibold text-emerald-500 mb-3">Computer & Network Forensic</h3>
+            <p className="text-gray-300">Detailed analysis of computer systems and networks to recover evidence of unauthorized activities and data breaches.</p>
+          </div>
+          
+          <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
+            <h3 className="text-xl font-semibold text-emerald-500 mb-3">Email & Mobile Forensic</h3>
+            <p className="text-gray-300">Recovery and analysis of email communications and mobile device data for evidence gathering and investigation.</p>
+          </div>
+          
+          <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
+            <h3 className="text-xl font-semibold text-emerald-500 mb-3">Cloud & Database Forensic</h3>
+            <p className="text-gray-300">Specialized investigation of cloud environments and databases to trace unauthorized access and data manipulation.</p>
+          </div>
+          
+          <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
+            <h3 className="text-xl font-semibold text-emerald-500 mb-3">Disk & Memory Forensic</h3>
+            <p className="text-gray-300">In-depth analysis of storage devices and system memory to recover deleted files and identify malicious code.</p>
+          </div>
+          
+          <div className="bg-gray-800 p-5 rounded-lg border border-gray-700 md:col-span-2">
+            <h3 className="text-xl font-semibold text-emerald-500 mb-3">Audio/Video & Social Media Forensic</h3>
+            <p className="text-gray-300">Analysis of multimedia content and social media activities to support investigations and legal proceedings.</p>
+          </div>
+        </div>
+        
+        <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
+          <h3 className="text-xl font-semibold text-emerald-500 mb-3">Our Forensic Process</h3>
+          <ol className="list-decimal pl-5 space-y-2 text-gray-300">
+            <li>Secure evidence collection and preservation</li>
+            <li>Forensic imaging and data acquisition</li>
+            <li>Detailed analysis using specialized tools</li>
+            <li>Evidence documentation and chain of custody maintenance</li>
+            <li>Expert reporting and testimony if required</li>
+          </ol>
+        </div>
+      </div>
+    )
+  };
 
   return (
-    <nav className={`bg-black shadow-lg border-b border-gray-800 sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'py-2' : 'py-4'}`}>
+    <>
+      
+      <nav className={`bg-black shadow-lg border-b border-gray-800 sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'py-2' : 'py-4'}`}>
       <div className="container-custom">
         <div className="flex justify-between items-center">
           {/* Logo */}
@@ -362,6 +520,7 @@ const Navbar = () => {
         )}
       </div>
     </nav>
+    </>
   );
 };
 

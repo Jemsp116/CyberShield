@@ -1,9 +1,9 @@
 {
   "pages": {
-    "/not-found": [
+    "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/not-found.js"
+      "static/chunks/app/page.js"
     ],
     "/layout": [
       "static/chunks/webpack.js",
@@ -11,25 +11,30 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/services/digital-forensic/page": [
+    "/not-found": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/services/digital-forensic/page.js"
+      "static/chunks/app/not-found.js"
     ],
-    "/page": [
+    "/services/managed-soc/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
+      "static/chunks/app/services/managed-soc/page.js"
     ],
     "/services/penetration-testing/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/services/penetration-testing/page.js"
     ],
-    "/services/managed-soc/page": [
+    "/services/cyber-resilience/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/services/managed-soc/page.js"
+      "static/chunks/app/services/cyber-resilience/page.js"
+    ],
+    "/services/digital-forensic/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/services/digital-forensic/page.js"
     ]
   }
 }
