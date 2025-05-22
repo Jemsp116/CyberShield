@@ -77,68 +77,108 @@ export default function PenetrationTestingPage() {
       )
     },
     webApp: {
-      title: "WEB Application Penetration Testing",
+      title: "Web Application Penetration Testing",
       content: (
         <div className="text-gray-300">
           <div className="bg-gray-800 p-6 rounded-lg mb-6">
-            <p className="text-lg mb-4">
-              Our Web Application Penetration Testing service identifies security vulnerabilities in your web applications before attackers can exploit them.
+            <p className="text-lg mb-4 font-bold">
+              Strengthening Your Digital Security
+            </p>
+
+            <p className="mb-4">
+              As businesses increasingly rely on web applications to serve their customers, the security of these applications becomes critical. Cyberattacks targeting vulnerabilities in web applications are on the rise, with attackers seeking to exploit weaknesses that could lead to data breaches, service interruptions, or other security incidents. Web Application Penetration Testing (Web App Pen Testing) is a proactive security measure that helps identify and fix vulnerabilities before malicious hackers can exploit them.
             </p>
             <p>
-              Web applications are common targets for attackers due to their accessibility and potential to contain sensitive data. Our comprehensive testing methodology covers all aspects of web application security, including the OWASP Top 10 vulnerabilities and beyond.
+              Our expert penetration testing services ensure that your web applications are secure, resilient, and compliant with industry standards.
             </p>
           </div>
 
-          <h3 className="text-xl font-bold text-emerald-500 mb-4">What We Test For</h3>
+          <h3 className="text-xl font-bold text-emerald-500 mb-4">What is Web Application Penetration Testing?</h3>
+          <p className="mb-6">
+            Web Application Penetration Testing is a simulated cyberattack conducted by security professionals to evaluate the security of a web application. The goal is to identify and exploit vulnerabilities in the application's code, configurations, and infrastructure that could be exploited by malicious attackers. Through this process, we help you identify weaknesses and provide actionable recommendations for improving security.
+          </p>
+          <p className="mb-6">
+            Penetration testing mimics the tactics, techniques, and procedures (TTPs) used by real-world attackers, ensuring that you're prepared to defend against actual threats.
+          </p>
+
+          <h3 className="text-xl font-bold text-emerald-500 mb-4">Why is Web Application Penetration Testing Important?</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
-              <h4 className="font-bold text-white mb-2">Injection Flaws</h4>
-              <p>SQL, NoSQL, OS, and LDAP injection vulnerabilities that could allow attackers to access or modify data.</p>
+              <h4 className="font-bold text-white mb-2">Identify Vulnerabilities</h4>
+              <p>Penetration testing helps find vulnerabilities like SQL injection, cross-site scripting (XSS), and broken authentication before attackers can exploit them.</p>
             </div>
             <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
-              <h4 className="font-bold text-white mb-2">Authentication Weaknesses</h4>
-              <p>Flaws in authentication mechanisms that could allow unauthorized access to user accounts.</p>
+              <h4 className="font-bold text-white mb-2">Mitigate Security Risks</h4>
+              <p>Reduces the risk of data breaches, financial loss, and reputational damage.</p>
             </div>
             <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
-              <h4 className="font-bold text-white mb-2">Cross-Site Scripting (XSS)</h4>
-              <p>Vulnerabilities that allow attackers to inject malicious scripts into web pages viewed by other users.</p>
+              <h4 className="font-bold text-white mb-2">Improve Compliance</h4>
+              <p>Assists in meeting standards like PCI DSS, HIPAA, and other regulatory requirements.</p>
             </div>
             <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
-              <h4 className="font-bold text-white mb-2">Security Misconfigurations</h4>
-              <p>Improperly configured application settings that could expose sensitive information or functionality.</p>
+              <h4 className="font-bold text-white mb-2">Understand Your Security Posture</h4>
+              <p>Offers insight into the effectiveness of your current security measures.</p>
             </div>
             <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
-              <h4 className="font-bold text-white mb-2">Sensitive Data Exposure</h4>
-              <p>Inadequate protection of sensitive data such as financial information, passwords, or personal data.</p>
-            </div>
-            <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
-              <h4 className="font-bold text-white mb-2">API Security</h4>
-              <p>Vulnerabilities in API endpoints that could allow unauthorized access or data manipulation.</p>
+              <h4 className="font-bold text-white mb-2">Protect Sensitive Data</h4>
+              <p>Ensures secure handling of customer and business-critical data.</p>
             </div>
           </div>
 
-          <h3 className="text-xl font-bold text-emerald-500 mb-4">Our Testing Methodology</h3>
-          <ol className="list-decimal pl-6 space-y-2 mb-8">
-            <li>Information gathering and application mapping</li>
-            <li>Authentication and session management testing</li>
-            <li>Authorization and access control testing</li>
-            <li>Input validation and sanitization testing</li>
-            <li>Business logic vulnerability assessment</li>
-            <li>Client-side security testing</li>
-            <li>API security assessment</li>
-            <li>Detailed reporting with remediation guidance</li>
-          </ol>
+          <h3 className="text-xl font-bold text-emerald-500 mb-4">How Web Application Penetration Testing Works</h3>
+          <div className="space-y-4 mb-8">
+            <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
+              <h4 className="font-bold text-white mb-2">Information Gathering (Reconnaissance)</h4>
+              <p>Understanding the architecture, technologies, and publicly accessible components.</p>
+            </div>
+            <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
+              <h4 className="font-bold text-white mb-2">Vulnerability Assessment</h4>
+              <p>Identification of vulnerabilities such as SQL Injection, Cross-Site Scripting (XSS), CSRF, Broken Authentication, Insecure Direct Object References (IDOR), Misconfigurations, and Session flaws.</p>
+            </div>
+            <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
+              <h4 className="font-bold text-white mb-2">Exploitation</h4>
+              <p>Attempting to exploit discovered vulnerabilities to assess their real-world impact.</p>
+            </div>
+            <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
+              <h4 className="font-bold text-white mb-2">Post-Exploitation & Lateral Movement</h4>
+              <p>Simulating an attacker's movement inside your environment after the initial breach.</p>
+            </div>
+            <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
+              <h4 className="font-bold text-white mb-2">Reporting & Recommendations</h4>
+              <p>Detailed documentation of findings, risks, exploitation paths, and fixes.</p>
+            </div>
+            <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
+              <h4 className="font-bold text-white mb-2">Remediation & Re-Testing</h4>
+              <p>Ensuring vulnerabilities have been effectively resolved and testing for regressions.</p>
+            </div>
+          </div>
+
+          <h3 className="text-xl font-bold text-emerald-500 mb-4">Key Benefits of Web Application Penetration Testing</h3>
+          <ul className="list-disc pl-6 space-y-2 mb-8">
+            <li><span className="font-bold text-white">Proactive Security:</span> Identify threats before attackers do.</li>
+            <li><span className="font-bold text-white">Data Protection:</span> Secure sensitive and customer data.</li>
+            <li><span className="font-bold text-white">Customer Trust:</span> Show your commitment to cybersecurity.</li>
+            <li><span className="font-bold text-white">Compliance:</span> Meet industry regulations.</li>
+            <li><span className="font-bold text-white">Comprehensive Insight:</span> Assess third-party and integration risks.</li>
+          </ul>
 
           <div className="bg-black p-6 rounded-lg border border-gray-800">
-            <h3 className="text-xl font-bold text-white mb-4">Why Choose Our Web Application Testing</h3>
-            <ul className="list-disc pl-6 space-y-2">
-              <li>Comprehensive coverage of OWASP Top 10 and beyond</li>
-              <li>Manual testing by experienced security professionals</li>
-              <li>Focus on business logic vulnerabilities that automated tools miss</li>
-              <li>Clear, actionable remediation guidance</li>
-              <li>Support for modern web technologies and frameworks</li>
-              <li>Minimal disruption to your production environment</li>
+            <h3 className="text-xl font-bold text-white mb-4">Why Choose Us?</h3>
+            <ul className="list-disc pl-6 space-y-2 mb-6">
+              <li>Experienced Security Professionals</li>
+              <li>Comprehensive Testing from UI to backend</li>
+              <li>Actionable Results you can use immediately</li>
+              <li>Confidential and Ethical methodology</li>
+              <li>Ongoing Support after testing and remediation</li>
             </ul>
+            <p className="mb-6">
+              Your web application is one of the most valuable assets in your organization. Protect it from vulnerabilities and cyber threats with Web Application Penetration Testing. We help you identify security weaknesses and implement robust defenses to keep your business safe from malicious attackers.
+            </p>
+            <div className="flex justify-center">
+              <Link href="/contact" className="btn-primary">
+                Get Started with Web App Penetration Testing
+              </Link>
+            </div>
           </div>
         </div>
       )
@@ -462,8 +502,8 @@ export default function PenetrationTestingPage() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                       <div>
-                        <h4 className="font-semibold text-white">Web Application Testing</h4>
-                        <p className="text-sm text-gray-400">Identify vulnerabilities in your web apps and APIs.</p>
+                        <h4 className="font-semibold text-white">Web Application Penetration Testing</h4>
+                        <p className="text-sm text-gray-400">Strengthen your digital security by identifying and fixing web app vulnerabilities.</p>
                       </div>
                     </div>
                   </li>
@@ -596,25 +636,31 @@ export default function PenetrationTestingPage() {
                     <svg className="h-6 w-6 mr-2 text-emerald-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span className="text-gray-300">Avoid costly data breaches and security incidents</span>
+                    <span className="text-gray-300">Proactive Security: Identify threats before attackers can exploit them</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="h-6 w-6 mr-2 text-emerald-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span className="text-gray-300">Meet compliance requirements (PCI DSS, HIPAA, SOC 2, ISO 27001)</span>
+                    <span className="text-gray-300">Data Protection: Secure sensitive customer and business data</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="h-6 w-6 mr-2 text-emerald-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span className="text-gray-300">Protect your brand reputation and customer trust</span>
+                    <span className="text-gray-300">Customer Trust: Demonstrate your commitment to cybersecurity</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="h-6 w-6 mr-2 text-emerald-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span className="text-gray-300">Make informed security investment decisions based on actual risk</span>
+                    <span className="text-gray-300">Compliance: Meet regulatory requirements (PCI DSS, HIPAA, SOC 2, ISO 27001)</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg className="h-6 w-6 mr-2 text-emerald-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="text-gray-300">Comprehensive Insight: Assess third-party and integration risks</span>
                   </li>
                 </ul>
               </div>
@@ -622,31 +668,37 @@ export default function PenetrationTestingPage() {
             
             <div>
               <div className="bg-gray-900 rounded-lg p-6 border border-gray-800 h-full">
-                <h3 className="text-xl font-bold text-white mb-4">For Your Security Team</h3>
+                <h3 className="text-xl font-bold text-white mb-4">Our Web App Testing Approach</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <svg className="h-6 w-6 mr-2 text-emerald-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span className="text-gray-300">Validate existing security controls and defenses</span>
+                    <span className="text-gray-300">Comprehensive testing from UI to backend systems</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="h-6 w-6 mr-2 text-emerald-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span className="text-gray-300">Learn from attack simulations to improve detection capabilities</span>
+                    <span className="text-gray-300">Identification of SQL injection, XSS, CSRF, and authentication vulnerabilities</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="h-6 w-6 mr-2 text-emerald-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span className="text-gray-300">Receive clear roadmaps for security improvements</span>
+                    <span className="text-gray-300">Detailed exploitation paths and actionable remediation steps</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="h-6 w-6 mr-2 text-emerald-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span className="text-gray-300">Gain an attacker's perspective on your environment</span>
+                    <span className="text-gray-300">Post-remediation testing to verify security improvements</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg className="h-6 w-6 mr-2 text-emerald-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="text-gray-300">Ongoing support from experienced security professionals</span>
                   </li>
                 </ul>
               </div>
@@ -698,9 +750,9 @@ export default function PenetrationTestingPage() {
           <div className="bg-gradient-to-r from-emerald-900/50 to-gray-900 rounded-lg p-8 md:p-12 border border-emerald-900">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div>
-                <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">Ready to Test Your Defenses?</h2>
+                <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">Protect Your Web Applications Today</h2>
                 <p className="text-gray-300 mb-0">
-                  Contact our team today to schedule a consultation and discover how our penetration testing services can strengthen your security posture.
+                  Your web application is one of the most valuable assets in your organization. Contact us today to learn how our Web Application Penetration Testing services can help safeguard your digital assets from vulnerabilities and cyber threats.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 md:justify-end">

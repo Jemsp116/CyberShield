@@ -19,63 +19,91 @@ export default function ManagedSOCPage() {
   // Service modal content
   const serviceModals = {
     monitoring: {
-      title: "24/7 Threat Monitoring and Detection",
+      title: "Advanced Threat Detection, Hunting, and Monitoring",
       content: (
         <div className="text-gray-300">
           <div className="bg-gray-800 p-6 rounded-lg mb-6">
             <p className="text-lg mb-4">
-              Our round-the-clock monitoring service uses advanced technologies to detect and alert on potential security threats in real-time, providing continuous protection for your organization's digital assets.
+              🔐 Proactively Protect Your Organization
             </p>
             <p>
-              In today's rapidly evolving threat landscape, continuous monitoring is essential to identify and respond to security incidents before they can cause significant damage. Our 24/7 Threat Monitoring and Detection service combines cutting-edge technology with expert human analysis to provide comprehensive protection.
+              In today's rapidly evolving threat landscape, continuous monitoring and advanced threat detection are essential to identify and respond to security incidents before they can cause significant damage. Our comprehensive threat detection, hunting, and monitoring services combine cutting-edge technology with expert human analysis to provide proactive protection for your organization.
             </p>
           </div>
 
-          <h3 className="text-xl font-bold text-emerald-500 mb-4">Key Features</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <h3 className="text-xl font-bold text-emerald-500 mb-4">📌 What is It?</h3>
+          <div className="grid grid-cols-1 md:grid-cols-1 gap-6 mb-8">
             <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
-              <h4 className="font-bold text-white mb-2">Real-time Network and Endpoint Monitoring</h4>
-              <p>Continuous surveillance of all network traffic and endpoint activities to detect suspicious behavior and potential threats as they occur.</p>
+              <h4 className="font-bold text-white mb-2">Advanced Threat Detection</h4>
+              <p>Identifies complex or hidden threats that evade traditional solutions—like zero-day attacks or advanced persistent threats (APTs).</p>
             </div>
             <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
-              <h4 className="font-bold text-white mb-2">Behavioral Analysis and Anomaly Detection</h4>
-              <p>Advanced algorithms that establish baselines of normal behavior and identify deviations that may indicate security threats.</p>
+              <h4 className="font-bold text-white mb-2">Threat Hunting</h4>
+              <p>Proactively searches through networks, endpoints, and data for Indicators of Compromise (IoCs).</p>
             </div>
             <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
-              <h4 className="font-bold text-white mb-2">Continuous Vulnerability Scanning</h4>
-              <p>Regular scanning of your environment to identify and prioritize vulnerabilities before they can be exploited by attackers.</p>
-            </div>
-            <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
-              <h4 className="font-bold text-white mb-2">Threat Intelligence Integration</h4>
-              <p>Incorporation of the latest threat intelligence to identify emerging threats and attack patterns targeting your industry.</p>
-            </div>
-            <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
-              <h4 className="font-bold text-white mb-2">Automated Alert Triage and Prioritization</h4>
-              <p>Intelligent filtering and prioritization of alerts to focus attention on the most critical threats and reduce alert fatigue.</p>
-            </div>
-            <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
-              <h4 className="font-bold text-white mb-2">24/7 Security Operations Center</h4>
-              <p>Staffed by experienced security analysts who provide continuous monitoring and rapid response to security incidents.</p>
+              <h4 className="font-bold text-white mb-2">Threat Monitoring</h4>
+              <p>Continuous real-time observation of systems and networks to detect suspicious activity and trigger immediate response.</p>
             </div>
           </div>
 
-          <h3 className="text-xl font-bold text-emerald-500 mb-4">Benefits</h3>
+          <h3 className="text-xl font-bold text-emerald-500 mb-4">🧠 Why It's Important</h3>
           <ul className="list-disc pl-6 space-y-2 mb-8">
-            <li>Early detection of security threats before they can cause significant damage</li>
-            <li>Reduced dwell time of attackers in your environment</li>
-            <li>Comprehensive visibility across your entire IT infrastructure</li>
-            <li>Minimized risk of data breaches and business disruption</li>
-            <li>Support for compliance with regulatory requirements</li>
-            <li>Peace of mind knowing your systems are continuously monitored</li>
+            <li>✅ <span className="font-bold text-white">Early Detection of Sophisticated Attacks:</span> Identifies threats like phishing, malware, ransomware before they escalate.</li>
+            <li>✅ <span className="font-bold text-white">Proactive Defense:</span> Actively searches for risks before they impact your organization.</li>
+            <li>✅ <span className="font-bold text-white">Minimize Impact:</span> Responds early to prevent major data breaches or disruptions.</li>
+            <li>✅ <span className="font-bold text-white">Compliance Ready:</span> Helps meet standards like GDPR, HIPAA, and more.</li>
+            <li>✅ <span className="font-bold text-white">Business Continuity:</span> Detect and fix threats fast to minimize downtime and damage.</li>
+          </ul>
+
+          <h3 className="text-xl font-bold text-emerald-500 mb-4">⚙️ How It Works</h3>
+          <div className="space-y-4 mb-8">
+            <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
+              <h4 className="font-bold text-white mb-2">Threat Intelligence Gathering</h4>
+              <p>Collects data from global feeds and internal network traffic.</p>
+            </div>
+            <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
+              <h4 className="font-bold text-white mb-2">Behavioral Analytics</h4>
+              <p>Uses AI & machine learning to detect abnormal patterns.</p>
+            </div>
+            <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
+              <h4 className="font-bold text-white mb-2">Continuous Monitoring (24/7)</h4>
+              <p>Real-time detection and response to suspicious behavior across all systems.</p>
+            </div>
+            <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
+              <h4 className="font-bold text-white mb-2">Threat Hunting</h4>
+              <p>Manually examines logs and endpoints to find undetected threats.</p>
+            </div>
+            <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
+              <h4 className="font-bold text-white mb-2">Incident Detection</h4>
+              <p>Identifies lateral movement, malware, and data exfiltration attempts.</p>
+            </div>
+            <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
+              <h4 className="font-bold text-white mb-2">Automated Alerts & Response</h4>
+              <p>Triggers alerts and takes automated action when threats are spotted.</p>
+            </div>
+            <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
+              <h4 className="font-bold text-white mb-2">Forensic Analysis</h4>
+              <p>Investigates attacks post-detection to prevent future reoccurrence.</p>
+            </div>
+          </div>
+
+          <h3 className="text-xl font-bold text-emerald-500 mb-4">🌟 Key Benefits</h3>
+          <ul className="list-disc pl-6 space-y-2 mb-8">
+            <li><span className="font-bold text-white">Early Threat Detection:</span> Uncovers hidden threats before they cause damage.</li>
+            <li><span className="font-bold text-white">24/7 Monitoring:</span> Keeps your network constantly protected from evolving cyber threats.</li>
+            <li><span className="font-bold text-white">Proactive Threat Mitigation:</span> Stops attacks before they affect operations.</li>
+            <li><span className="font-bold text-white">Full Visibility:</span> Gain deep insight into networks, endpoints, and cloud systems.</li>
+            <li><span className="font-bold text-white">Lower Impact:</span> Reduces breach likelihood and minimizes impact of any incident.</li>
           </ul>
 
           <div className="bg-black p-6 rounded-lg border border-gray-800">
-            <h3 className="text-xl font-bold text-white mb-4">Our Approach</h3>
+            <h3 className="text-xl font-bold text-white mb-4">💼 Why Choose Us?</h3>
             <p className="mb-4">
-              We take a proactive, multi-layered approach to threat monitoring and detection, combining advanced technology with expert human analysis to provide comprehensive protection for your organization.
+              Our expert cybersecurity team offers cutting-edge detection and monitoring, ensuring your organization is always one step ahead of attackers.
             </p>
             <p>
-              Our team of security experts works around the clock to monitor your environment, investigate alerts, and respond to security incidents. We use a combination of signature-based detection, behavioral analysis, and machine learning to identify both known and unknown threats.
+              📞 Let us secure your business 24/7 with real-time monitoring and rapid incident response.
             </p>
           </div>
         </div>
@@ -87,65 +115,88 @@ export default function ManagedSOCPage() {
         <div className="text-gray-300">
           <div className="bg-gray-800 p-6 rounded-lg mb-6">
             <p className="text-lg mb-4">
-              Protect your business with 24/7 cybersecurity monitoring through our comprehensive Security Operations Center (SOC) deployment and monitoring services.
+              🔐 Protect Your Business with 24/7 Cyber Security Monitoring
             </p>
             <p>
-              Cybersecurity threats are more sophisticated than ever, and a single breach can lead to devastating financial and reputational damage. That's why continuous, proactive monitoring is essential for keeping your organization secure. With our SOC Deployment and Monitoring services, we provide round-the-clock protection to ensure your business is safeguarded from evolving cyber threats.
+              Cybersecurity threats are more sophisticated than ever, and a single breach can lead to devastating financial and reputational damage. That's why continuous, proactive monitoring is essential for keeping your organization secure. With SOC Deployment and Monitoring services, we provide round-the-clock protection to ensure your business is safeguarded from evolving cyber threats.
             </p>
           </div>
 
-          <h3 className="text-xl font-bold text-emerald-500 mb-4">What is SOC Deployment and Monitoring?</h3>
+          <h3 className="text-xl font-bold text-emerald-500 mb-4">✅ What is SOC Deployment and Monitoring?</h3>
           <p className="mb-6">
             Security Operations Center (SOC) deployment and monitoring is a comprehensive cybersecurity service designed to detect, respond to, and mitigate security incidents in real-time. By integrating advanced security tools and expert analysts, a SOC monitors your network, systems, and data continuously, ensuring that potential threats are identified and neutralized before they can cause harm.
           </p>
 
-          <h3 className="text-xl font-bold text-emerald-500 mb-4">Key Components</h3>
+          <h3 className="text-xl font-bold text-emerald-500 mb-4">🎯 Why Choose SOC Deployment and Monitoring?</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
-              <h4 className="font-bold text-white mb-2">Custom SOC Architecture Design</h4>
-              <p>We design a Security Operations Center architecture tailored to your organization's specific needs, size, and industry requirements.</p>
+              <h4 className="font-bold text-white mb-2">24/7 Threat Monitoring</h4>
+              <p>Our SOC services operate around the clock, giving you constant vigilance over your network and IT systems. We ensure that any suspicious activity is detected and addressed immediately.</p>
             </div>
             <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
-              <h4 className="font-bold text-white mb-2">Security Tools Integration</h4>
-              <p>Integration and configuration of SIEM, EDR, NDR, and other security tools to provide comprehensive visibility and detection capabilities.</p>
+              <h4 className="font-bold text-white mb-2">Rapid Threat Detection and Response</h4>
+              <p>Using advanced detection tools and threat intelligence, we swiftly identify potential cyber threats—such as malware, ransomware, or data breaches—and respond effectively to contain and mitigate them.</p>
             </div>
             <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
-              <h4 className="font-bold text-white mb-2">24/7 Expert Monitoring</h4>
-              <p>Round-the-clock monitoring by experienced security analysts who can quickly identify and respond to potential threats.</p>
+              <h4 className="font-bold text-white mb-2">Minimized Risk and Downtime</h4>
+              <p>With real-time monitoring and a quick response protocol, we significantly reduce the risk of prolonged downtime or financial loss from cyberattacks, keeping your business running smoothly.</p>
             </div>
             <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
-              <h4 className="font-bold text-white mb-2">Security Posture Assessment</h4>
-              <p>Regular evaluation of your security posture to identify gaps and recommend improvements to strengthen your defenses.</p>
+              <h4 className="font-bold text-white mb-2">Expertise and Advanced Tools</h4>
+              <p>Our team consists of experienced security analysts, engineers, and response teams equipped with the latest security technologies, such as SIEM, EDR, and IDS/IPS, to provide you with state-of-the-art threat detection and protection.</p>
             </div>
             <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
-              <h4 className="font-bold text-white mb-2">Continuous Improvement</h4>
-              <p>Ongoing optimization of your SOC to adapt to evolving threats and improve detection and response capabilities.</p>
-            </div>
-            <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
-              <h4 className="font-bold text-white mb-2">Compliance Support</h4>
-              <p>Assistance with meeting regulatory requirements through comprehensive monitoring, documentation, and reporting.</p>
+              <h4 className="font-bold text-white mb-2">Compliance Assurance</h4>
+              <p>A properly deployed SOC helps ensure your organization meets regulatory requirements like GDPR, HIPAA, and PCI-DSS by maintaining robust security controls and providing compliance reporting.</p>
             </div>
           </div>
 
-          <h3 className="text-xl font-bold text-emerald-500 mb-4">Benefits of SOC Deployment and Monitoring</h3>
+          <h3 className="text-xl font-bold text-emerald-500 mb-4">🛠️ How SOC Deployment Works</h3>
+          <div className="space-y-4 mb-8">
+            <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
+              <h4 className="font-bold text-white mb-2">Initial Assessment</h4>
+              <p>We assess your existing infrastructure and business needs to design a SOC strategy tailored to your organization. This includes identifying potential vulnerabilities and defining security goals.</p>
+            </div>
+            <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
+              <h4 className="font-bold text-white mb-2">SOC Architecture Setup</h4>
+              <p>We design and deploy a SOC solution based on your specific needs, selecting the right combination of tools and technologies to ensure effective monitoring, incident detection, and response.</p>
+            </div>
+            <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
+              <h4 className="font-bold text-white mb-2">Continuous Monitoring and Threat Detection</h4>
+              <p>Our SOC uses advanced monitoring tools to track network activity, detect threats, and analyze security events in real-time, ensuring that your environment is always under vigilant watch.</p>
+            </div>
+            <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
+              <h4 className="font-bold text-white mb-2">Incident Response and Mitigation</h4>
+              <p>Once a threat is detected, our SOC team swiftly takes action to contain and neutralize the incident, limiting the damage and restoring your systems to normal operations as quickly as possible.</p>
+            </div>
+            <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
+              <h4 className="font-bold text-white mb-2">Ongoing Improvement and Reporting</h4>
+              <p>After an incident, we conduct thorough post-incident reviews, ensuring that lessons learned are applied to improve security measures and response strategies. Detailed reports are generated for compliance purposes and to inform decision-makers.</p>
+            </div>
+          </div>
+
+          <h3 className="text-xl font-bold text-emerald-500 mb-4">🌟 Benefits of SOC Deployment and Monitoring</h3>
           <ul className="list-disc pl-6 space-y-2 mb-8">
-            <li>Proactive threat detection to identify and neutralize threats before they impact your business</li>
-            <li>Rapid incident response to minimize damage and reduce recovery time</li>
-            <li>Comprehensive visibility across your entire IT infrastructure</li>
-            <li>Cost-effective security operations without significant investment in infrastructure and personnel</li>
-            <li>Access to specialized expertise and advanced security technologies</li>
-            <li>Support for compliance with regulatory requirements</li>
-            <li>Peace of mind knowing your systems are continuously monitored by security experts</li>
+            <li>Round-the-clock protection from evolving cyber threats.</li>
+            <li>Real-time threat detection and rapid incident response.</li>
+            <li>Protection from data breaches, ransomware, and other advanced attacks.</li>
+            <li>Enhanced regulatory compliance and reporting capabilities.</li>
+            <li>Scalable and customizable to fit the needs of businesses of all sizes.</li>
           </ul>
 
           <div className="bg-black p-6 rounded-lg border border-gray-800">
-            <h3 className="text-xl font-bold text-white mb-4">Our Approach</h3>
+            <h3 className="text-xl font-bold text-white mb-4">📞 Get Started with SOC Deployment and Monitoring</h3>
             <p className="mb-4">
-              We take a tailored approach to SOC deployment and monitoring, designing a solution that meets your specific security needs and business requirements.
+              We offer robust SOC Deployment and Monitoring services designed to safeguard your organization against a wide range of cyber threats. Our expert team is ready to implement a comprehensive SOC solution tailored to your unique needs, ensuring continuous monitoring and a rapid response to any security incidents.
             </p>
-            <p>
-              Our team works closely with you to understand your environment, identify your most critical assets, and develop a comprehensive security monitoring strategy. We then deploy and configure the necessary tools and technologies, establish monitoring processes, and provide ongoing management and optimization of your SOC.
+            <p className="mb-6">
+              Contact us today to learn more about how our SOC services can protect your business. Let us help you stay secure and compliant in an increasingly complex cybersecurity landscape.
             </p>
+            <div className="flex justify-center">
+              <Link href="/contact" className="btn-primary">
+                Schedule a Consultation
+              </Link>
+            </div>
           </div>
         </div>
       )
@@ -510,17 +561,17 @@ export default function ManagedSOCPage() {
                   <div className="bg-gray-900 p-6 rounded-lg border border-gray-800">
                     <div className="flex items-center mb-4">
                       <div className="bg-emerald-900 rounded-full w-10 h-10 flex items-center justify-center text-emerald-500 mr-4">1</div>
-                      <h4 className="text-lg font-bold text-white">24/7 Monitoring</h4>
+                      <h4 className="text-lg font-bold text-white">Advanced Threat Detection</h4>
                     </div>
-                    <p className="text-gray-400 pl-14">Continuous monitoring of your network, systems, and applications for suspicious activities and security events.</p>
+                    <p className="text-gray-400 pl-14">Identifies complex or hidden threats that evade traditional solutions—like zero-day attacks or advanced persistent threats (APTs).</p>
                   </div>
                   
                   <div className="bg-gray-900 p-6 rounded-lg border border-gray-800">
                     <div className="flex items-center mb-4">
                       <div className="bg-emerald-900 rounded-full w-10 h-10 flex items-center justify-center text-emerald-500 mr-4">2</div>
-                      <h4 className="text-lg font-bold text-white">Threat Detection</h4>
+                      <h4 className="text-lg font-bold text-white">Threat Hunting</h4>
                     </div>
-                    <p className="text-gray-400 pl-14">Advanced analytics and correlation to identify potential security threats and anomalous behavior.</p>
+                    <p className="text-gray-400 pl-14">Proactively searches through networks, endpoints, and data for Indicators of Compromise (IoCs) before they can cause damage.</p>
                   </div>
                   
                   <div className="bg-gray-900 p-6 rounded-lg border border-gray-800">
@@ -572,8 +623,8 @@ export default function ManagedSOCPage() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                       <div>
-                        <h4 className="font-semibold text-white">24/7 Threat Monitoring and Detection</h4>
-                        <p className="text-sm text-gray-400">Continuous monitoring of your environment for security threats.</p>
+                        <h4 className="font-semibold text-white">Advanced Threat Detection, Hunting, and Monitoring</h4>
+                        <p className="text-sm text-gray-400">Proactive protection against sophisticated cyber threats.</p>
                       </div>
                     </div>
                   </li>
@@ -588,7 +639,7 @@ export default function ManagedSOCPage() {
                       </svg>
                       <div>
                         <h4 className="font-semibold text-white">SOC Deployment and Monitoring</h4>
-                        <p className="text-sm text-gray-400">Protect your business with 24/7 cybersecurity monitoring and comprehensive SOC services.</p>
+                        <p className="text-sm text-gray-400">Comprehensive security monitoring to safeguard your organization against evolving cyber threats.</p>
                       </div>
                     </div>
                   </li>
@@ -655,17 +706,17 @@ export default function ManagedSOCPage() {
         <div className="container-custom">
           <h2 className="section-heading text-white mb-8">SOC Deployment and Monitoring</h2>
           <div className="bg-black p-8 rounded-lg border border-gray-800 mb-12">
-            <h3 className="text-2xl font-bold text-white mb-4">Protect Your Business with 24/7 Cyber Security Monitoring</h3>
+            <h3 className="text-2xl font-bold text-white mb-4">🔐 Protect Your Business with 24/7 Cyber Security Monitoring</h3>
             <p className="text-gray-300 mb-6">
               Cybersecurity threats are more sophisticated than ever, and a single breach can lead to devastating financial and reputational damage. That's why continuous, proactive monitoring is essential for keeping your organization secure. With SOC Deployment and Monitoring services, we provide round-the-clock protection to ensure your business is safeguarded from evolving cyber threats.
             </p>
             
-            <h4 className="text-xl font-bold text-white mb-4">What is SOC Deployment and Monitoring?</h4>
+            <h4 className="text-xl font-bold text-white mb-4">✅ What is SOC Deployment and Monitoring?</h4>
             <p className="text-gray-300 mb-6">
               Security Operations Center (SOC) deployment and monitoring is a comprehensive cybersecurity service designed to detect, respond to, and mitigate security incidents in real-time. By integrating advanced security tools and expert analysts, a SOC monitors your network, systems, and data continuously, ensuring that potential threats are identified and neutralized before they can cause harm.
             </p>
             
-            <h4 className="text-xl font-bold text-white mb-4">Why Choose SOC Deployment and Monitoring?</h4>
+            <h4 className="text-xl font-bold text-white mb-4">🎯 Why Choose SOC Deployment and Monitoring?</h4>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
               <div className="bg-gray-900 p-5 rounded-lg border border-gray-800">
                 <div className="flex items-center mb-3">
@@ -674,9 +725,9 @@ export default function ManagedSOCPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                     </svg>
                   </div>
-                  <h5 className="font-semibold text-white">Proactive Threat Detection</h5>
+                  <h5 className="font-semibold text-white">24/7 Threat Monitoring</h5>
                 </div>
-                <p className="text-gray-400 pl-11">Identify and neutralize threats before they impact your business operations or compromise sensitive data.</p>
+                <p className="text-gray-400 pl-11">Our SOC services operate around the clock, giving you constant vigilance over your network and IT systems. We ensure that any suspicious activity is detected and addressed immediately.</p>
               </div>
               
               <div className="bg-gray-900 p-5 rounded-lg border border-gray-800">
@@ -686,9 +737,9 @@ export default function ManagedSOCPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
                   </div>
-                  <h5 className="font-semibold text-white">Rapid Incident Response</h5>
+                  <h5 className="font-semibold text-white">Rapid Threat Detection and Response</h5>
                 </div>
-                <p className="text-gray-400 pl-11">Our expert team responds quickly to security incidents, minimizing damage and reducing recovery time.</p>
+                <p className="text-gray-400 pl-11">Using advanced detection tools and threat intelligence, we swiftly identify potential cyber threats—such as malware, ransomware, or data breaches—and respond effectively to contain and mitigate them.</p>
               </div>
               
               <div className="bg-gray-900 p-5 rounded-lg border border-gray-800">
@@ -698,9 +749,9 @@ export default function ManagedSOCPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                     </svg>
                   </div>
-                  <h5 className="font-semibold text-white">Compliance Support</h5>
+                  <h5 className="font-semibold text-white">Minimized Risk and Downtime</h5>
                 </div>
-                <p className="text-gray-400 pl-11">Meet regulatory requirements with comprehensive security monitoring and detailed reporting.</p>
+                <p className="text-gray-400 pl-11">With real-time monitoring and a quick response protocol, we significantly reduce the risk of prolonged downtime or financial loss from cyberattacks, keeping your business running smoothly.</p>
               </div>
               
               <div className="bg-gray-900 p-5 rounded-lg border border-gray-800">
@@ -710,10 +761,67 @@ export default function ManagedSOCPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
-                  <h5 className="font-semibold text-white">Cost-Effective Security</h5>
+                  <h5 className="font-semibold text-white">Expertise and Advanced Tools</h5>
                 </div>
-                <p className="text-gray-400 pl-11">Access enterprise-grade security operations without the significant investment in infrastructure and specialized personnel.</p>
+                <p className="text-gray-400 pl-11">Our team consists of experienced security analysts, engineers, and response teams equipped with the latest security technologies, such as SIEM, EDR, and IDS/IPS, to provide you with state-of-the-art threat detection and protection.</p>
               </div>
+              
+              <div className="bg-gray-900 p-5 rounded-lg border border-gray-800">
+                <div className="flex items-center mb-3">
+                  <div className="bg-emerald-900 rounded-full w-8 h-8 flex items-center justify-center text-emerald-500 mr-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <h5 className="font-semibold text-white">Compliance Assurance</h5>
+                </div>
+                <p className="text-gray-400 pl-11">A properly deployed SOC helps ensure your organization meets regulatory requirements like GDPR, HIPAA, and PCI-DSS by maintaining robust security controls and providing compliance reporting.</p>
+              </div>
+            </div>
+            
+            <h4 className="text-xl font-bold text-white mt-8 mb-4">🛠️ How SOC Deployment Works</h4>
+            <div className="space-y-4 mb-6">
+              <div className="flex items-start">
+                <div className="bg-emerald-900 rounded-full w-8 h-8 flex items-center justify-center text-emerald-500 mr-4 flex-shrink-0">1</div>
+                <div>
+                  <h5 className="font-bold text-white mb-1">Initial Assessment</h5>
+                  <p className="text-gray-400">We assess your existing infrastructure and business needs to design a SOC strategy tailored to your organization. This includes identifying potential vulnerabilities and defining security goals.</p>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <div className="bg-emerald-900 rounded-full w-8 h-8 flex items-center justify-center text-emerald-500 mr-4 flex-shrink-0">2</div>
+                <div>
+                  <h5 className="font-bold text-white mb-1">SOC Architecture Setup</h5>
+                  <p className="text-gray-400">We design and deploy a SOC solution based on your specific needs, selecting the right combination of tools and technologies to ensure effective monitoring, incident detection, and response.</p>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <div className="bg-emerald-900 rounded-full w-8 h-8 flex items-center justify-center text-emerald-500 mr-4 flex-shrink-0">3</div>
+                <div>
+                  <h5 className="font-bold text-white mb-1">Continuous Monitoring and Threat Detection</h5>
+                  <p className="text-gray-400">Our SOC uses advanced monitoring tools to track network activity, detect threats, and analyze security events in real-time, ensuring that your environment is always under vigilant watch.</p>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <div className="bg-emerald-900 rounded-full w-8 h-8 flex items-center justify-center text-emerald-500 mr-4 flex-shrink-0">4</div>
+                <div>
+                  <h5 className="font-bold text-white mb-1">Incident Response and Mitigation</h5>
+                  <p className="text-gray-400">Once a threat is detected, our SOC team swiftly takes action to contain and neutralize the incident, limiting the damage and restoring your systems to normal operations as quickly as possible.</p>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <div className="bg-emerald-900 rounded-full w-8 h-8 flex items-center justify-center text-emerald-500 mr-4 flex-shrink-0">5</div>
+                <div>
+                  <h5 className="font-bold text-white mb-1">Ongoing Improvement and Reporting</h5>
+                  <p className="text-gray-400">After an incident, we conduct thorough post-incident reviews, ensuring that lessons learned are applied to improve security measures and response strategies. Detailed reports are generated for compliance purposes and to inform decision-makers.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="mt-8 text-center">
+              <Link href="/contact" className="btn-primary">
+                Get Started with SOC Deployment
+              </Link>
             </div>
           </div>
         </div>
@@ -767,34 +875,48 @@ export default function ManagedSOCPage() {
       {/* Benefits */}
       <section className="py-16">
         <div className="container-custom">
-          <h2 className="section-heading text-white mb-12">Benefits of Our Managed SOC Service</h2>
+          <h2 className="section-heading text-white mb-12">🌟 Benefits of Our Managed SOC Service</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-gray-900 p-6 rounded-lg border border-gray-800">
+              <h3 className="text-xl font-bold text-white mb-4">Round-the-clock Protection</h3>
+              <p className="text-gray-400">
+                Our global team provides 24/7 vigilance against evolving cyber threats, ensuring your business is protected at all times without the challenges of staffing multiple shifts.
+              </p>
+            </div>
+            
+            <div className="bg-gray-900 p-6 rounded-lg border border-gray-800">
+              <h3 className="text-xl font-bold text-white mb-4">Proactive Threat Detection and Response</h3>
+              <p className="text-gray-400">
+                Our advanced detection capabilities identify threats early in the attack lifecycle and respond immediately. We actively hunt for threats before they impact your organization, minimizing potential damage to your systems and data.
+              </p>
+            </div>
+            
+            <div className="bg-gray-900 p-6 rounded-lg border border-gray-800">
+              <h3 className="text-xl font-bold text-white mb-4">Full Visibility and Protection</h3>
+              <p className="text-gray-400">
+                Gain deep insight into networks, endpoints, and cloud systems. Our comprehensive security approach safeguards your organization from data breaches, ransomware, and other sophisticated cyber attacks that could compromise your business operations.
+              </p>
+            </div>
+            
+            <div className="bg-gray-900 p-6 rounded-lg border border-gray-800">
+              <h3 className="text-xl font-bold text-white mb-4">Enhanced Regulatory Compliance</h3>
+              <p className="text-gray-400">
+                Meet regulatory requirements with robust security controls and detailed reporting capabilities that demonstrate due diligence in protecting sensitive data and systems.
+              </p>
+            </div>
+            
+            <div className="bg-gray-900 p-6 rounded-lg border border-gray-800">
               <h3 className="text-xl font-bold text-white mb-4">Cost-Effective Security</h3>
               <p className="text-gray-400">
-                Gain access to enterprise-grade security operations at a fraction of the cost of building and staffing your own SOC. Eliminate capital expenditures on infrastructure and technology while reducing operational costs.
+                Gain access to enterprise-grade security operations at a fraction of the cost of building and staffing your own SOC, eliminating capital expenditures on infrastructure and technology.
               </p>
             </div>
             
             <div className="bg-gray-900 p-6 rounded-lg border border-gray-800">
-              <h3 className="text-xl font-bold text-white mb-4">24/7 Coverage</h3>
+              <h3 className="text-xl font-bold text-white mb-4">Scalable and Customizable</h3>
               <p className="text-gray-400">
-                Ensure continuous monitoring of your environment without the challenges of staffing multiple shifts. Our global team provides round-the-clock vigilance, ensuring threats are detected and addressed at any time.
-              </p>
-            </div>
-            
-            <div className="bg-gray-900 p-6 rounded-lg border border-gray-800">
-              <h3 className="text-xl font-bold text-white mb-4">Faster Threat Detection</h3>
-              <p className="text-gray-400">
-                Leverage our advanced detection capabilities to identify threats early in the attack lifecycle. Our combination of technology and human expertise enables us to detect sophisticated threats that might evade automated systems.
-              </p>
-            </div>
-            
-            <div className="bg-gray-900 p-6 rounded-lg border border-gray-800">
-              <h3 className="text-xl font-bold text-white mb-4">Improved Compliance</h3>
-              <p className="text-gray-400">
-                Meet regulatory requirements for security monitoring and incident response. Our services help you demonstrate due diligence in protecting sensitive data and systems, with documentation to support compliance audits.
+                Our SOC services can be tailored to fit the needs of businesses of all sizes, scaling with your organization as it grows and adapting to your changing security requirements.
               </p>
             </div>
           </div>
@@ -804,9 +926,9 @@ export default function ManagedSOCPage() {
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-emerald-900 to-gray-900">
         <div className="container-custom text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Ready to Strengthen Your Security Posture?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Ready to Secure Your Business 24/7?</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Contact us today to learn how our Managed SOC services can help protect your organization from evolving cyber threats.
+            Let us secure your business with real-time monitoring and rapid incident response. Contact us today to learn how our advanced threat detection and monitoring services can help protect your organization.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/contact" className="btn-primary">

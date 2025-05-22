@@ -11,15 +11,10 @@
       "static/chunks/main-app.js",
       "static/chunks/app/not-found.js"
     ],
-    "/services/cyber-resilience/page": [
+    "/services/penetration-testing/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/services/cyber-resilience/page.js"
-    ],
-    "/services/digital-forensic/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/services/digital-forensic/page.js"
+      "static/chunks/app/services/penetration-testing/page.js"
     ]
   }
 }
