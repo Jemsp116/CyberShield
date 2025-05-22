@@ -21,15 +21,6 @@ A modern, responsive website for a cybersecurity firm built with Next.js and Tai
 - **Icons**: Hero Icons and custom SVGs
 - **Deployment**: Ready for deployment on Vercel or similar platforms
 
-## Getting Started
-
-### Prerequisites
-
-- Node.js 14.x or later
-- npm 
-
-
-## Customization
 
 ### Changing Colors
 
