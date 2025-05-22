@@ -1,7 +1,4 @@
 {
   "/page": "app/page.js",
-  "/services/managed-soc/page": "app/services/managed-soc/page.js",
-  "/services/digital-forensic/page": "app/services/digital-forensic/page.js",
-  "/services/penetration-testing/page": "app/services/penetration-testing/page.js",
-  "/services/cyber-resilience/page": "app/services/cyber-resilience/page.js"
+  "/services/penetration-testing/page": "app/services/penetration-testing/page.js"
 }

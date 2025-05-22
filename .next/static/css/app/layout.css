@@ -1064,11 +1064,11 @@ video {
 .resize {
   resize: both;
 }
-.list-disc {
-  list-style-type: disc;
-}
 .list-decimal {
   list-style-type: decimal;
+}
+.list-disc {
+  list-style-type: disc;
 }
 .appearance-none {
   -webkit-appearance: none;
@@ -1522,11 +1522,11 @@ video {
 .not-italic {
   font-style: normal;
 }
-.leading-tight {
-  line-height: 1.25;
-}
 .leading-relaxed {
   line-height: 1.625;
+}
+.leading-tight {
+  line-height: 1.25;
 }
 .tracking-wider {
   letter-spacing: 0.05em;
