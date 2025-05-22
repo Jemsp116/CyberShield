@@ -37,10 +37,51 @@ const Navbar = () => {
   };
 
   const serviceDropdownItems = [
-    { title: 'Penetration Testing', href: '/services/penetration-testing' },
-    { title: 'Security Consulting', href: '/services/security-consulting' },
-    { title: 'Incident Response', href: '/services/incident-response' },
-    { title: 'Vulnerability Assessment', href: '/services/vulnerability-assessment' }
+    { 
+      title: 'Managed SOC as a Service', 
+      href: '/services/managed-soc',
+      subItems: [
+        { title: '24/7 Threat Monitoring and Detection', href: '/services/managed-soc#monitoring' },
+        { title: 'SOC Deployment and Monitoring', href: '/services/managed-soc#deployment' },
+        { title: 'Incident Response and Mitigation', href: '/services/managed-soc#response' },
+        { title: 'Log Management and Analysis', href: '/services/managed-soc#log-management' },
+        { title: 'MDR, EDR, XDR, SOAR', href: '/services/managed-soc#advanced-solutions' }
+      ]
+    },
+    { 
+      title: 'Penetration Testing', 
+      href: '/services/penetration-testing',
+      subItems: [
+        { title: 'Red Teaming', href: '/services/penetration-testing#red-teaming' },
+        { title: 'WEB Application Penetration Testing', href: '/services/penetration-testing#web-app' },
+        { title: 'Network Penetration Testing', href: '/services/penetration-testing#network' },
+        { title: 'Mobile App Penetration Testing', href: '/services/penetration-testing#mobile' },
+        { title: 'Cloud Penetration Service', href: '/services/penetration-testing#cloud' }
+      ]
+    },
+    { 
+      title: 'Cyber Resilience Services', 
+      href: '/services/cyber-resilience',
+      subItems: [
+        { title: 'Risk Assessment and Management', href: '/services/cyber-resilience#risk' },
+        { title: 'Cloud Security and Disaster Recovery', href: '/services/cyber-resilience#cloud' },
+        { title: 'Data Protection and Backup Solutions', href: '/services/cyber-resilience#data' },
+        { title: 'Advanced Threat Detection', href: '/services/cyber-resilience#threat-detection' },
+        { title: 'Virtual CISO', href: '/services/cyber-resilience#vciso' },
+        { title: 'IAM/PAM as a Service', href: '/services/cyber-resilience#iam' }
+      ]
+    },
+    { 
+      title: 'Digital Forensic', 
+      href: '/services/digital-forensic',
+      subItems: [
+        { title: 'Computer & Network Forensic', href: '/services/digital-forensic#computer' },
+        { title: 'Email & Mobile Forensic', href: '/services/digital-forensic#email' },
+        { title: 'Cloud & Database Forensic', href: '/services/digital-forensic#cloud' },
+        { title: 'Disk & Memory Forensic', href: '/services/digital-forensic#disk' },
+        { title: 'Audio/Video & Social Media Forensic', href: '/services/digital-forensic#media' }
+      ]
+    }
   ];
 
   const solutionsDropdownItems = [
@@ -107,16 +148,37 @@ const Navbar = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
                 </svg>
               </button>
-              <div className="absolute left-0 mt-2 w-60 bg-gray-900 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-800 glow-border">
+              <div className="absolute left-0 mt-2 w-72 bg-gray-900 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-800 glow-border z-50">
                 <div className="py-1">
                   {serviceDropdownItems.map((item, index) => (
-                    <Link 
-                      key={index} 
-                      href={item.href} 
-                      className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-emerald-500"
-                    >
-                      {item.title}
-                    </Link>
+                    <div key={index} className="relative group/submenu">
+                      <Link 
+                        href={item.href} 
+                        className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-emerald-500 flex justify-between items-center"
+                      >
+                        {item.title}
+                        {item.subItems && (
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
+                          </svg>
+                        )}
+                      </Link>
+                      {item.subItems && (
+                        <div className="absolute left-full top-0 w-80 bg-gray-900 rounded-md shadow-lg opacity-0 invisible group-hover/submenu:opacity-100 group-hover/submenu:visible transition-all duration-300 border border-gray-800 glow-border">
+                          <div className="py-1">
+                            {item.subItems.map((subItem, subIndex) => (
+                              <Link 
+                                key={subIndex} 
+                                href={subItem.href} 
+                                className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-emerald-500"
+                              >
+                                {subItem.title}
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+                    </div>
                   ))}
                 </div>
               </div>
@@ -226,9 +288,35 @@ const Navbar = () => {
                 {activeDropdown === 1 && (
                   <div className="pl-4 border-l border-gray-800 ml-4 mt-1">
                     {serviceDropdownItems.map((item, index) => (
-                      <Link key={index} href={item.href} className="block py-2 px-3 text-gray-400 hover:text-emerald-500">
-                        {item.title}
-                      </Link>
+                      <div key={index}>
+                        <div className="flex justify-between items-center">
+                          <Link href={item.href} className="block py-2 px-3 text-gray-400 hover:text-emerald-500">
+                            {item.title}
+                          </Link>
+                          {item.subItems && (
+                            <button
+                              onClick={(e) => {
+                                e.preventDefault();
+                                toggleDropdown(`1-${index}`);
+                              }}
+                              className="py-2 px-3 text-gray-400 hover:text-emerald-500"
+                            >
+                              <svg className={`w-4 h-4 transform ${activeDropdown === `1-${index}` ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                              </svg>
+                            </button>
+                          )}
+                        </div>
+                        {activeDropdown === `1-${index}` && item.subItems && (
+                          <div className="pl-4 border-l border-gray-700 ml-4 mt-1">
+                            {item.subItems.map((subItem, subIndex) => (
+                              <Link key={subIndex} href={subItem.href} className="block py-2 px-3 text-gray-500 hover:text-emerald-500 text-sm">
+                                {subItem.title}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+                      </div>
                     ))}
                   </div>
                 )}
@@ -277,4 +365,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar; 
+export default Navbar;

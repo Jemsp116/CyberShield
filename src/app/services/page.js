@@ -9,14 +9,32 @@ export default function ServicesPage() {
   const services = [
     {
       id: 1,
+      title: 'Managed SOC as a Service',
+      description: 'Our comprehensive Managed Security Operations Center (SOC) services provide round-the-clock monitoring and protection for your organization\'s digital assets, ensuring rapid detection and response to security threats.',
+      features: [
+        '24/7 Threat Monitoring and Detection',
+        'SOC Deployment and Monitoring',
+        'Incident Response and Mitigation',
+        'Log Management and Analysis',
+        'MDR, EDR, XDR, SOAR Solutions'
+      ],
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        </svg>
+      ),
+      link: '/services/managed-soc'
+    },
+    {
+      id: 2,
       title: 'Penetration Testing',
       description: 'Our penetration testing services simulate real-world attacks on your systems to identify vulnerabilities before malicious actors can exploit them. Our experienced ethical hackers use the latest techniques to thoroughly test your defenses.',
       features: [
-        'Web Application Testing',
-        'Network Infrastructure Testing',
-        'Mobile Application Testing',
-        'Cloud Security Assessment',
-        'Social Engineering Simulations'
+        'Red Teaming',
+        'WEB Application Penetration Testing',
+        'Network Penetration Testing',
+        'Mobile App Penetration Testing',
+        'Cloud Penetration Service'
       ],
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -26,94 +44,40 @@ export default function ServicesPage() {
       link: '/services/penetration-testing'
     },
     {
-      id: 2,
-      title: 'Security Consulting',
-      description: 'Our expert security consultants work with your team to develop and implement comprehensive security strategies tailored to your organization\'s specific needs, helping you build a strong security posture.',
+      id: 3,
+      title: 'Cyber Resilience Services',
+      description: 'Our cyber resilience services help your organization build robust defenses, maintain business continuity, and quickly recover from security incidents, ensuring your operations remain resilient against evolving cyber threats.',
       features: [
-        'Security Program Development',
-        'Risk Assessment & Management',
-        'Compliance Advisory (GDPR, HIPAA, PCI DSS)',
-        'Security Architecture Review',
-        'Security Awareness Training'
+        'Risk Assessment and Management',
+        'Cloud Security and Disaster Recovery',
+        'Data Protection and Backup Solutions',
+        'Advanced Threat Detection and Monitoring',
+        'Virtual CISO and IAM/PAM as a Service'
       ],
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
         </svg>
       ),
-      link: '/services/security-consulting'
-    },
-    {
-      id: 3,
-      title: 'Incident Response',
-      description: 'When a security breach occurs, our incident response team provides rapid and effective containment, investigation, and remediation services to minimize damage and restore normal operations as quickly as possible.',
-      features: [
-        '24/7 Emergency Response',
-        'Threat Containment',
-        'Forensic Investigation',
-        'Root Cause Analysis',
-        'Recovery Planning'
-      ],
-      icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-      ),
-      link: '/services/incident-response'
+      link: '/services/cyber-resilience'
     },
     {
       id: 4,
-      title: 'Vulnerability Assessment',
-      description: 'Our vulnerability assessment services provide thorough scanning and assessment of your systems to identify, classify, and prioritize security vulnerabilities, giving you a clear roadmap for remediation.',
+      title: 'Digital Forensic',
+      description: 'Our digital forensic services provide expert investigation and analysis of digital evidence, helping you uncover the truth behind security incidents, data breaches, and other digital crimes with legally defensible methodologies.',
       features: [
-        'Network Vulnerability Scanning',
-        'Application Security Testing',
-        'Configuration Review',
-        'Compliance Gap Analysis',
-        'Remediation Guidance'
+        'Computer and Network Forensic',
+        'Email and Mobile Forensic',
+        'Cloud and Database Forensic',
+        'Disk and Memory Forensic',
+        'Audio/Video and Social Media Forensic'
       ],
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
         </svg>
       ),
-      link: '/services/vulnerability-assessment'
-    },
-    {
-      id: 5,
-      title: 'Security Operations Center (SOC)',
-      description: 'Our managed SOC services provide continuous monitoring, detection, and response to security threats, helping you maintain a strong security posture and quickly address potential incidents.',
-      features: [
-        '24/7 Security Monitoring',
-        'Threat Detection & Analysis',
-        'Security Incident Management',
-        'Threat Intelligence Integration',
-        'Regular Security Reporting'
-      ],
-      icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-        </svg>
-      ),
-      link: '/services/security-operations-center'
-    },
-    {
-      id: 6,
-      title: 'Cloud Security',
-      description: 'Our cloud security services help you securely navigate the complexities of cloud environments, ensuring your data and applications remain protected across your entire cloud infrastructure.',
-      features: [
-        'Cloud Security Architecture',
-        'Cloud Configuration Review',
-        'Identity & Access Management',
-        'Container & Serverless Security',
-        'Data Protection Strategy'
-      ],
-      icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
-        </svg>
-      ),
-      link: '/services/cloud-security'
+      link: '/services/digital-forensic'
     }
   ];
 

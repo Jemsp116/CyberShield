@@ -26,10 +26,11 @@ const Footer = () => {
           <div className="slide-in-right" style={{ animationDelay: '0.2s' }}>
             <h4 className="text-lg font-semibold mb-4 text-white">Services</h4>
             <ul className="space-y-2">
+              <li><Link href="/services/managed-soc" className="text-gray-400 hover:text-emerald-500 hover:glow-text transition-colors">Managed SOC as a Service</Link></li>
               <li><Link href="/services/penetration-testing" className="text-gray-400 hover:text-emerald-500 hover:glow-text transition-colors">Penetration Testing</Link></li>
-              <li><Link href="/services/security-consulting" className="text-gray-400 hover:text-emerald-500 hover:glow-text transition-colors">Security Consulting</Link></li>
-              <li><Link href="/services/incident-response" className="text-gray-400 hover:text-emerald-500 hover:glow-text transition-colors">Incident Response</Link></li>
-              <li><Link href="/services/vulnerability-assessment" className="text-gray-400 hover:text-emerald-500 hover:glow-text transition-colors">Vulnerability Assessment</Link></li>
+              <li><Link href="/services/cyber-resilience" className="text-gray-400 hover:text-emerald-500 hover:glow-text transition-colors">Cyber Resilience Services</Link></li>
+              <li><Link href="/services/digital-forensic" className="text-gray-400 hover:text-emerald-500 hover:glow-text transition-colors">Digital Forensic</Link></li>
+              <li><Link href="/services" className="text-gray-400 hover:text-emerald-500 hover:glow-text transition-colors">View All Services</Link></li>
             </ul>
           </div>
           

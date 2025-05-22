@@ -1,8 +1,6 @@
 {
   "/page": "app/page.js",
-  "/about/page": "app/about/page.js",
-  "/about/team/page": "app/about/team/page.js",
-  "/contact/page": "app/contact/page.js",
-  "/careers/page": "app/careers/page.js",
-  "/about/mission/page": "app/about/mission/page.js"
+  "/services/penetration-testing/page": "app/services/penetration-testing/page.js",
+  "/services/digital-forensic/page": "app/services/digital-forensic/page.js",
+  "/services/managed-soc/page": "app/services/managed-soc/page.js"
 }
