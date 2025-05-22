@@ -30,6 +30,10 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   const toggleDropdown = (index) => {
     if (activeDropdown === index) {
       setActiveDropdown(null);
@@ -399,7 +403,7 @@ const Navbar = () => {
         {isOpen && (
           <div className="lg:hidden mt-2 pb-4 border-t border-gray-800">
             <div className="flex flex-col pt-2 space-y-1">
-              <Link href="/" className="py-2 px-3 text-gray-300 hover:text-emerald-500 transition-colors">
+              <Link href="/" onClick={closeMenu} className="py-2 px-3 text-gray-300 hover:text-emerald-500 transition-colors">
                 Home
               </Link>
               
@@ -416,16 +420,16 @@ const Navbar = () => {
                 </button>
                 {activeDropdown === 0 && (
                   <div className="pl-4 border-l border-gray-800 ml-4 mt-1">
-                    <Link href="/about" className="block py-2 px-3 text-gray-400 hover:text-emerald-500">
+                    <Link href="/about" onClick={closeMenu} className="block py-2 px-3 text-gray-400 hover:text-emerald-500">
                       Who We Are
                     </Link>
-                    <Link href="/about/team" className="block py-2 px-3 text-gray-400 hover:text-emerald-500">
+                    <Link href="/about/team" onClick={closeMenu} className="block py-2 px-3 text-gray-400 hover:text-emerald-500">
                       Our Team
                     </Link>
-                    <Link href="/about/mission" className="block py-2 px-3 text-gray-400 hover:text-emerald-500">
+                    <Link href="/about/mission" onClick={closeMenu} className="block py-2 px-3 text-gray-400 hover:text-emerald-500">
                       Mission & Vision
                     </Link>
-                    <Link href="/careers" className="block py-2 px-3 text-gray-400 hover:text-emerald-500">
+                    <Link href="/careers" onClick={closeMenu} className="block py-2 px-3 text-gray-400 hover:text-emerald-500">
                       Careers
                     </Link>
                   </div>
@@ -448,13 +452,20 @@ const Navbar = () => {
                     {serviceDropdownItems.map((item, index) => (
                       <div key={index}>
                         <div className="flex justify-between items-center">
-                          <Link href={item.href} className="block py-2 px-3 text-gray-400 hover:text-emerald-500">
+                          <Link href={item.href} onClick={closeMenu} className="block py-2 px-3 text-gray-400 hover:text-emerald-500">
                             {item.title}
                           </Link>
                           {item.subItems && (
                             <button
                               onClick={(e) => {
                                 e.preventDefault();
+                                // Close any other nested dropdowns before opening this one
+                                if (activeDropdown !== `1-${index}`) {
+                                  // Check if current active dropdown is a nested one
+                                  if (typeof activeDropdown === 'string' && activeDropdown.startsWith('1-')) {
+                                    setActiveDropdown(null);
+                                  }
+                                }
                                 toggleDropdown(`1-${index}`);
                               }}
                               className="py-2 px-3 text-gray-400 hover:text-emerald-500"
@@ -468,7 +479,7 @@ const Navbar = () => {
                         {activeDropdown === `1-${index}` && item.subItems && (
                           <div className="pl-4 border-l border-gray-700 ml-4 mt-1">
                             {item.subItems.map((subItem, subIndex) => (
-                              <Link key={subIndex} href={subItem.href} className="block py-2 px-3 text-gray-500 hover:text-emerald-500 text-sm">
+                              <Link key={subIndex} href={subItem.href} onClick={closeMenu} className="block py-2 px-3 text-gray-500 hover:text-emerald-500 text-sm">
                                 {subItem.title}
                               </Link>
                             ))}
@@ -494,7 +505,7 @@ const Navbar = () => {
                 {activeDropdown === 2 && (
                   <div className="pl-4 border-l border-gray-800 ml-4 mt-1">
                     {solutionsDropdownItems.map((item, index) => (
-                      <Link key={index} href={item.href} className="block py-2 px-3 text-gray-400 hover:text-emerald-500">
+                      <Link key={index} href={item.href} onClick={closeMenu} className="block py-2 px-3 text-gray-400 hover:text-emerald-500">
                         {item.title}
                       </Link>
                     ))}
@@ -502,16 +513,16 @@ const Navbar = () => {
                 )}
               </div>
               
-              <Link href="/blog" className="py-2 px-3 text-gray-300 hover:text-emerald-500 transition-colors">
+              <Link href="/blog" onClick={closeMenu} className="py-2 px-3 text-gray-300 hover:text-emerald-500 transition-colors">
                 Blog
               </Link>
               
-              <Link href="/contact" className="py-2 px-3 text-gray-300 hover:text-emerald-500 transition-colors">
+              <Link href="/contact" onClick={closeMenu} className="py-2 px-3 text-gray-300 hover:text-emerald-500 transition-colors">
                 Contact
               </Link>
               
               <div className="pt-4">
-                <Link href="/contact" className="block w-full btn-primary text-center py-3 pulse-glow">
+                <Link href="/contact" onClick={closeMenu} className="block w-full btn-primary text-center py-3 pulse-glow">
                   Get a Free Assessment
                 </Link>
               </div>

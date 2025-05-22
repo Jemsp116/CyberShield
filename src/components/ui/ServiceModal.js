@@ -38,7 +38,7 @@ const ServiceModal = ({ isOpen, onClose, title, content }) => {
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 backdrop-blur-sm transition-opacity">
       <div 
         ref={modalRef}
-        className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-gray-900 rounded-lg shadow-2xl border border-gray-800 glow-border"
+        className="relative w-[95%] max-w-4xl max-h-[90vh] overflow-y-auto bg-gray-900 rounded-lg shadow-2xl border border-gray-800 glow-border mx-2"
       >
         <div className="sticky top-0 z-10 flex justify-between items-center p-6 bg-gray-900 border-b border-gray-800">
           <h2 className="text-2xl font-bold text-white">{title}</h2>
@@ -52,17 +52,17 @@ const ServiceModal = ({ isOpen, onClose, title, content }) => {
           </button>
         </div>
         
-        <div className="p-6">
+        <div className="p-4 sm:p-6">
           {content}
         </div>
         
-        <div className="sticky bottom-0 z-10 flex justify-end p-6 bg-gray-900 border-t border-gray-800">
-          <Link href="/contact" className="btn-primary mr-4">
+        <div className="sticky bottom-0 z-10 flex flex-col sm:flex-row justify-end p-6 bg-gray-900 border-t border-gray-800">
+          <Link href="/contact" className="btn-primary w-full sm:w-auto mb-3 sm:mb-0 sm:mr-4 text-center">
             Request a Consultation
           </Link>
           <button 
             onClick={onClose}
-            className="btn-secondary"
+            className="btn-secondary w-full sm:w-auto"
           >
             Close
           </button>

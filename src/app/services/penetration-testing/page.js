@@ -421,7 +421,7 @@ export default function PenetrationTestingPage() {
               
               <div className="mt-12">
                 <h3 className="text-2xl font-bold text-white mb-6">Our Penetration Testing Methodology</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                   <div className="bg-gray-900 p-6 rounded-lg border border-gray-800">
                     <div className="flex items-center mb-4">
                       <div className="bg-emerald-900 rounded-full w-10 h-10 flex items-center justify-center text-emerald-500 mr-4">1</div>
@@ -474,7 +474,7 @@ export default function PenetrationTestingPage() {
             </div>
             
             <div>
-              <div className="bg-gray-900 rounded-lg p-6 border border-gray-800 sticky top-24">
+              <div className="bg-gray-900 rounded-lg p-6 border border-gray-800 md:sticky md:top-24">
                 <h3 className="text-xl font-bold text-white mb-2">Our Penetration Testing Services</h3>
                 <p className="text-xs text-gray-500 mb-4 italic">Click on services for detailed information</p>
                 <ul className="space-y-4">
@@ -582,7 +582,7 @@ export default function PenetrationTestingPage() {
         <div className="container-custom">
           <h2 className="section-heading text-center text-white mb-12">What Sets Us Apart</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-black p-6 rounded-lg border border-gray-800">
               <div className="text-emerald-500 mb-4">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -712,7 +712,7 @@ export default function PenetrationTestingPage() {
         <div className="container-custom">
           <h2 className="section-heading text-center text-white mb-12">Frequently Asked Questions</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             <div className="bg-black rounded-lg p-6 border border-gray-800">
               <h3 className="text-lg font-bold text-white mb-3">How often should we conduct penetration tests?</h3>
               <p className="text-gray-400">
@@ -756,10 +756,10 @@ export default function PenetrationTestingPage() {
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 md:justify-end">
-                <Link href="/contact" className="btn-primary py-3 px-6 text-center">
+                <Link href="/contact" className="btn-primary py-3 px-6 text-center w-full sm:w-auto">
                   Schedule a Consultation
                 </Link>
-                <Link href="/contact" className="btn-secondary py-3 px-6 text-center">
+                <Link href="/contact" className="btn-secondary py-3 px-6 text-center w-full sm:w-auto">
                   Request Sample Report
                 </Link>
               </div>

@@ -1,4 +1,4 @@
 {
-  "/not-found": "app/not-found.js",
-  "/services/penetration-testing/page": "app/services/penetration-testing/page.js"
+  "/page": "app/page.js",
+  "/services/managed-soc/page": "app/services/managed-soc/page.js"
 }
