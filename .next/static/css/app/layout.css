@@ -1008,11 +1008,11 @@ video {
 .w-80 {
   width: 20rem;
 }
-.w-full {
-  width: 100%;
-}
 .w-\[95\%\] {
   width: 95%;
+}
+.w-full {
+  width: 100%;
 }
 .max-w-3xl {
   max-width: 48rem;

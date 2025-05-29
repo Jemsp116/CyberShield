@@ -346,32 +346,6 @@ const Navbar = () => {
               </div>
             </div>
 
-            {/* Solutions Dropdown */}
-            <div className="relative group">
-              <button 
-                className="py-2 px-3 text-gray-300 hover:text-emerald-500 transition-colors flex items-center"
-                onClick={() => toggleDropdown(2)}
-              >
-                Solutions
-                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
-                </svg>
-              </button>
-              <div className="absolute left-0 mt-2 w-60 bg-gray-900 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-800 glow-border">
-                <div className="py-1">
-                  {solutionsDropdownItems.map((item, index) => (
-                    <Link 
-                      key={index} 
-                      href={item.href} 
-                      className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-emerald-500"
-                    >
-                      {item.title}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            </div>
-
             <Link href="/blog" className="py-2 px-3 text-gray-300 hover:text-emerald-500 transition-colors">
               Blog
             </Link>
@@ -429,9 +403,7 @@ const Navbar = () => {
                     <Link href="/about/mission" onClick={closeMenu} className="block py-2 px-3 text-gray-400 hover:text-emerald-500">
                       Mission & Vision
                     </Link>
-                    <Link href="/careers" onClick={closeMenu} className="block py-2 px-3 text-gray-400 hover:text-emerald-500">
-                      Careers
-                    </Link>
+                    
                   </div>
                 )}
               </div>
@@ -491,27 +463,8 @@ const Navbar = () => {
                 )}
               </div>
               
-              {/* Mobile Solutions Dropdown */}
-              <div>
-                <button
-                  onClick={() => toggleDropdown(2)}
-                  className="w-full text-left py-2 px-3 text-gray-300 hover:text-emerald-500 transition-colors flex justify-between items-center"
-                >
-                  Solutions
-                  <svg className={`w-4 h-4 transform ${activeDropdown === 2 ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
-                  </svg>
-                </button>
-                {activeDropdown === 2 && (
-                  <div className="pl-4 border-l border-gray-800 ml-4 mt-1">
-                    {solutionsDropdownItems.map((item, index) => (
-                      <Link key={index} href={item.href} onClick={closeMenu} className="block py-2 px-3 text-gray-400 hover:text-emerald-500">
-                        {item.title}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
+              
+            
               
               <Link href="/blog" onClick={closeMenu} className="py-2 px-3 text-gray-300 hover:text-emerald-500 transition-colors">
                 Blog
