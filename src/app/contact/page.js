@@ -50,7 +50,7 @@ export default function ContactPage() {
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
-                      contact@k-infotech.com
+                      info@k-infotech.com
                     </p>
                   </div>
                 </div>
@@ -172,7 +172,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Global Presence */}
+      {/* Global Presence
       <section className="py-16 bg-gray-900">
         <div className="container-custom">
           <h2 className="section-heading text-center mb-12">Our Global Presence</h2>
@@ -215,7 +215,7 @@ export default function ContactPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Emergency Contact */}
       <section className="py-12 bg-emerald-900 text-white">
