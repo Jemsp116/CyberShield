@@ -35,7 +35,4 @@ Add or modify content in the respective page components or create new pages by a
 This website can be easily deployed on Vercel or other hosting platforms that support Next.js applications.
 
 
-## Acknowledgements
 
-- [Next.js Documentation](https://nextjs.org/docs)
-- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
