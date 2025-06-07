@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import ServiceModal from '@/components/ui/ServiceModal';
-import { Metadata } from 'next';
 
 export default function ManagedSOCPage() {
   const [activeModal, setActiveModal] = useState(null);
