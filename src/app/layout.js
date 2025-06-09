@@ -7,6 +7,7 @@ import Footer from '@/components/layout/Footer';
 import AnimatedBackground from '@/components/layout/AnimatedBackground';
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { BlogProvider } from '@/context/BlogContext';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -18,13 +19,17 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-black text-gray-300`}>
-        <AnimatedBackground />
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
-        <Analytics />
-        <SpeedInsights />
+      <body>
+        <BlogProvider>
+          <body className={`${inter.className} bg-black text-gray-300`}>
+            <AnimatedBackground />
+            <Navbar />
+            <main>{children}</main>
+            <Footer />
+            <Analytics />
+            <SpeedInsights />
+          </body>
+        </BlogProvider>
       </body>
     </html>
   );
