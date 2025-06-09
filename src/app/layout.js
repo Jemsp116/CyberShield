@@ -1,3 +1,5 @@
+// Add this in the head section if not already present
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 import './globals.css';
 import { Inter } from 'next/font/google';
 import Navbar from '@/components/layout/Navbar';
@@ -26,4 +28,4 @@ export default function RootLayout({ children }) {
       </body>
     </html>
   );
-} 
+}

@@ -346,6 +346,8 @@ const Navbar = () => {
               </div>
             </div>
 
+            {/* Remove Solutions Dropdown from desktop menu */}
+
             <Link href="/blog" className="py-2 px-3 text-gray-300 hover:text-emerald-500 transition-colors">
               Blog
             </Link>
@@ -361,7 +363,11 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <div className="lg:hidden flex items-center">
-            <button onClick={toggleMenu} className="text-gray-300 hover:text-emerald-500 focus:outline-none">
+            <button 
+              onClick={toggleMenu} 
+              className="text-gray-300 hover:text-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 rounded-md p-2"
+              aria-label="Toggle menu"
+            >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 {isOpen ? (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -373,56 +379,57 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu - Fixed version */}
         {isOpen && (
-          <div className="lg:hidden mt-2 pb-4 border-t border-gray-800">
+          <div className="lg:hidden mt-2 pb-4 border-t border-gray-800 max-h-[70vh] overflow-y-auto overscroll-contain">
             <div className="flex flex-col pt-2 space-y-1">
-              <Link href="/" onClick={closeMenu} className="py-2 px-3 text-gray-300 hover:text-emerald-500 transition-colors">
+              <Link href="/" onClick={closeMenu} className="py-3 px-3 text-gray-300 hover:text-emerald-500 transition-colors">
                 Home
               </Link>
               
-              {/* Mobile About Dropdown */}
+              {/* Mobile About Dropdown - Fixed */}
               <div>
                 <button
                   onClick={() => toggleDropdown(0)}
-                  className="w-full text-left py-2 px-3 text-gray-300 hover:text-emerald-500 transition-colors flex justify-between items-center"
+                  className="w-full text-left py-3 px-3 text-gray-300 hover:text-emerald-500 transition-colors flex justify-between items-center"
+                  aria-expanded={activeDropdown === 0}
                 >
-                  About Us
-                  <svg className={`w-4 h-4 transform ${activeDropdown === 0 ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <span>About Us</span>
+                  <svg className={`w-5 h-5 transform transition-transform duration-200 ${activeDropdown === 0 ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
                   </svg>
                 </button>
                 {activeDropdown === 0 && (
-                  <div className="pl-4 border-l border-gray-800 ml-4 mt-1">
-                    <Link href="/about" onClick={closeMenu} className="block py-2 px-3 text-gray-400 hover:text-emerald-500">
+                  <div className="pl-4 border-l border-gray-800 ml-4 mt-1 space-y-1">
+                    <Link href="/about" onClick={closeMenu} className="block py-3 px-3 text-gray-400 hover:text-emerald-500">
                       Who We Are
                     </Link>
-                    <Link href="/about/team" onClick={closeMenu} className="block py-2 px-3 text-gray-400 hover:text-emerald-500">
+                    <Link href="/about/team" onClick={closeMenu} className="block py-3 px-3 text-gray-400 hover:text-emerald-500">
                       Our Team
                     </Link>
-                    <Link href="/about/mission" onClick={closeMenu} className="block py-2 px-3 text-gray-400 hover:text-emerald-500">
+                    <Link href="/about/mission" onClick={closeMenu} className="block py-3 px-3 text-gray-400 hover:text-emerald-500">
                       Mission & Vision
                     </Link>
-                    
                   </div>
                 )}
               </div>
               
-              {/* Mobile Services Dropdown */}
+              {/* Mobile Services Dropdown - Fixed */}
               <div>
                 <button
                   onClick={() => toggleDropdown(1)}
-                  className="w-full text-left py-2 px-3 text-gray-300 hover:text-emerald-500 transition-colors flex justify-between items-center"
+                  className="w-full text-left py-3 px-3 text-gray-300 hover:text-emerald-500 transition-colors flex justify-between items-center"
+                  aria-expanded={activeDropdown === 1}
                 >
-                  Services
-                  <svg className={`w-4 h-4 transform ${activeDropdown === 1 ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <span>Services</span>
+                  <svg className={`w-5 h-5 transform transition-transform duration-200 ${activeDropdown === 1 ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
                   </svg>
                 </button>
                 {activeDropdown === 1 && (
-                  <div className="pl-4 border-l border-gray-800 ml-4 mt-1">
+                  <div className="pl-4 border-l border-gray-800 ml-4 mt-1 space-y-2">
                     {serviceDropdownItems.map((item, index) => (
-                      <div key={index}>
+                      <div key={index} className="py-1">
                         <div className="flex justify-between items-center">
                           <Link href={item.href} onClick={closeMenu} className="block py-2 px-3 text-gray-400 hover:text-emerald-500">
                             {item.title}
@@ -431,25 +438,21 @@ const Navbar = () => {
                             <button
                               onClick={(e) => {
                                 e.preventDefault();
-                                // Close any other nested dropdowns before opening this one
-                                if (activeDropdown !== `1-${index}`) {
-                                  // Check if current active dropdown is a nested one
-                                  if (typeof activeDropdown === 'string' && activeDropdown.startsWith('1-')) {
-                                    setActiveDropdown(null);
-                                  }
-                                }
-                                toggleDropdown(`1-${index}`);
+                                e.stopPropagation();
+                                // Toggle this specific nested dropdown
+                                setActiveDropdown(activeDropdown === `1-${index}` ? 1 : `1-${index}`);
                               }}
-                              className="py-2 px-3 text-gray-400 hover:text-emerald-500"
+                              className="p-3 text-gray-400 hover:text-emerald-500 rounded-full"
+                              aria-label={`Toggle ${item.title} submenu`}
                             >
-                              <svg className={`w-4 h-4 transform ${activeDropdown === `1-${index}` ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                              <svg className={`w-5 h-5 transform transition-transform duration-200 ${activeDropdown === `1-${index}` ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
                               </svg>
                             </button>
                           )}
                         </div>
                         {activeDropdown === `1-${index}` && item.subItems && (
-                          <div className="pl-4 border-l border-gray-700 ml-4 mt-1">
+                          <div className="pl-4 border-l border-gray-700 ml-4 mt-2 space-y-1">
                             {item.subItems.map((subItem, subIndex) => (
                               <Link key={subIndex} href={subItem.href} onClick={closeMenu} className="block py-2 px-3 text-gray-500 hover:text-emerald-500 text-sm">
                                 {subItem.title}
@@ -463,14 +466,13 @@ const Navbar = () => {
                 )}
               </div>
               
+              {/* Remove Solutions Dropdown from mobile menu */}
               
-            
-              
-              <Link href="/blog" onClick={closeMenu} className="py-2 px-3 text-gray-300 hover:text-emerald-500 transition-colors">
+              <Link href="/blog" onClick={closeMenu} className="py-3 px-3 text-gray-300 hover:text-emerald-500 transition-colors">
                 Blog
               </Link>
               
-              <Link href="/contact" onClick={closeMenu} className="py-2 px-3 text-gray-300 hover:text-emerald-500 transition-colors">
+              <Link href="/contact" onClick={closeMenu} className="py-3 px-3 text-gray-300 hover:text-emerald-500 transition-colors">
                 Contact
               </Link>
               
