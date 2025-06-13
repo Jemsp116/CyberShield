@@ -21,13 +21,28 @@ async function fetchData(url) {
 }
 
 export async function getBlogsData(id) {
-    const url = new URL((id) ? `/api/blogs/${id}` :"/api/blogs", baseUrl);
+    const url = new URL((id) ? `/api/blogs/${id}` : "/api/blogs", baseUrl);
 
     url.search = qs.stringify({
         populate: {
+            category: {
+                fields: ["category", "slug"]
+            },
             image: {
                 fields: ["url"],
             },
+            populate: true,
+        }
+    });
+    console.log(url.href);
+    return await fetchData(url.href);
+}
+
+export async function getCategoriesData(id) {
+    const url = new URL((id) ? `/api/categories/${id}` : "/api/categories", baseUrl);
+
+    url.search = qs.stringify({
+        populate: {
             populate: true,
         }
     });

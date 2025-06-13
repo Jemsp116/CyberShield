@@ -1,129 +1,85 @@
-import { getBlogsData } from '@/data/loaders';
+"use client";
+import { getBlogsData, getCategoriesData } from '@/data/loaders';
 import Link from 'next/link';
-import Image from 'next/image';
+import { StrapiImage } from '@/components/strapi/StrapiImage';
+import { useState, useEffect } from 'react';
 
-export const metadata = {
-  title: 'Blog | K-Infotech Global Consulting Services',
-  description: 'Latest IT, cybersecurity insights, trends, and best practices from our technology experts.',
-};
+// Remove the async keyword from the component function
+export default function BlogPage() {
+  const [regularPosts, setRegularPosts] = useState([]);
+  const [featuredPosts, setFeaturedPosts] = useState([]);
+  const [blogPosts, setBlogPosts] = useState(null);
+  const [categoryData, setCategoryData] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
 
-// const blogPosts = [
-//   {
-//     id: 1,
-//     title: 'Zero Trust Architecture: A Modern Approach to Cybersecurity',
-//     slug: 'zero-trust-architecture',
-//     author: 'Jennifer Hayes',
-//     authorRole: 'Chief Security Officer',
-//     date: 'June 12, 2023',
-//     category: 'Enterprise Security',
-//     excerpt: 'Traditional security models operate on the outdated assumption that everything inside an organization\'s network should be trusted. The Zero Trust model challenges this notion by assuming no user or system should be trusted by default.',
-//     readTime: '7 min read',
-//     image: '/images/blog/zero-trust.jpg',
-//     featured: true
-//   },
-//   {
-//     id: 2,
-//     title: 'The Rising Threat of Ransomware: How to Prepare and Respond',
-//     slug: 'rising-threat-of-ransomware',
-//     author: 'Michael Chen',
-//     authorRole: 'Incident Response Team Lead',
-//     date: 'May 28, 2023',
-//     category: 'Threat Intelligence',
-//     excerpt: 'Ransomware attacks have increased by 150% in the past year alone. Organizations must understand the evolving tactics of ransomware operators and develop comprehensive defense strategies.',
-//     readTime: '9 min read',
-//     image: '/images/blog/ransomware.jpg',
-//     featured: true
-//   },
-//   {
-//     id: 3,
-//     title: 'Securing the Cloud: Best Practices for Multi-Cloud Environments',
-//     slug: 'securing-multi-cloud-environments',
-//     author: 'Sarah Johnson',
-//     authorRole: 'Cloud Security Architect',
-//     date: 'May 15, 2023',
-//     category: 'Cloud Security',
-//     excerpt: 'As organizations increasingly adopt multi-cloud strategies, security teams face the challenge of protecting data and applications across different cloud providers with varying security controls and capabilities.',
-//     readTime: '8 min read',
-//     image: '/images/blog/cloud-security.jpg',
-//     featured: false
-//   },
-//   {
-//     id: 4,
-//     title: 'AI in Cybersecurity: Promise and Peril',
-//     slug: 'ai-in-cybersecurity',
-//     author: 'Dr. Robert Zhang',
-//     authorRole: 'AI Security Research Lead',
-//     date: 'April 30, 2023',
-//     category: 'Emerging Technology',
-//     excerpt: 'Artificial intelligence is revolutionizing cybersecurity, enabling faster threat detection and response. However, threat actors are also leveraging AI to enhance their attacks, creating an evolving technological arms race.',
-//     readTime: '11 min read',
-//     image: '/images/blog/ai-security.jpg',
-//     featured: false
-//   },
-//   {
-//     id: 5,
-//     title: 'Security Implications of IoT in Enterprise Environments',
-//     slug: 'iot-security-implications',
-//     author: 'Daniel Martinez',
-//     authorRole: 'IoT Security Specialist',
-//     date: 'April 15, 2023',
-//     category: 'IoT Security',
-//     excerpt: 'The proliferation of IoT devices in the workplace introduces significant security challenges. From smart lightbulbs to industrial sensors, each device represents a potential entry point for attackers.',
-//     readTime: '6 min read',
-//     image: '/images/blog/iot-security.jpg',
-//     featured: false
-//   },
-//   {
-//     id: 6,
-//     title: 'Building a Security-First Development Culture',
-//     slug: 'security-first-development',
-//     author: 'Emily Watson',
-//     authorRole: 'Application Security Director',
-//     date: 'March 28, 2023',
-//     category: 'Application Security',
-//     excerpt: 'Integrating security into the software development lifecycle is no longer optional. Organizations that build security into their development culture from the ground up produce more secure and reliable applications.',
-//     readTime: '8 min read',
-//     image: '/images/blog/devsecops.jpg',
-//     featured: false
-//   },
-//   {
-//     id: 7,
-//     title: 'Compliance is Not Security: Going Beyond Regulatory Requirements',
-//     slug: 'compliance-vs-security',
-//     author: 'Thomas Anderson',
-//     authorRole: 'Governance & Compliance Lead',
-//     date: 'March 10, 2023',
-//     category: 'Compliance & Governance',
-//     excerpt: 'While regulatory compliance is necessary, it often represents the minimum security baseline. This article explores how organizations can build robust security programs that exceed compliance requirements.',
-//     readTime: '7 min read',
-//     image: '/images/blog/compliance.jpg',
-//     featured: false
-//   },
-//   {
-//     id: 8,
-//     title: 'The Human Element: Social Engineering in the Digital Age',
-//     slug: 'social-engineering-digital-age',
-//     author: 'Amanda Parker',
-//     authorRole: 'Security Awareness Trainer',
-//     date: 'February 22, 2023',
-//     category: 'Security Awareness',
-//     excerpt: 'Despite technological advances in security, humans remain the most exploitable vulnerability in most organizations. Understanding modern social engineering tactics is essential for effective defense.',
-//     readTime: '9 min read',
-//     image: '/images/blog/social-engineering.jpg',
-//     featured: false
-//   }
-// ];
+  // Move data fetching to useEffect
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const blogData = await getBlogsData();
+        const categories = await getCategoriesData();
+        
+        setBlogPosts(blogData);
+        setCategoryData(categories);
+        
+        if (blogData?.data) {
+          const featured = blogData.data.filter(post => post.featured);
+          const regular = blogData.data.filter(post => !post.featured);
+          setFeaturedPosts(featured);
+          setRegularPosts(regular);
+        }
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    
+    fetchData();
+  }, []);
 
-export default async function BlogPage() {
+  // Convert API date format to readable date
+  const formatDate = (dateString) => {
+    if (!dateString) return "No date";
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+  };
 
-  const blogPosts = await getBlogsData();
-  // console.log("The data: ",blogPosts);
+  const handleCategoryChange = (event) => {
+    const selectedCategory = event.target.value;
+    
+    if (selectedCategory === "All Categories" && blogPosts?.data) {
+      // Reset to show all non-featured posts
+      setRegularPosts(blogPosts.data.filter(post => !post.featured));
+      return;
+    }
+    
+    // Filter by selected category
+    if (blogPosts?.data) {
+      setRegularPosts(
+        blogPosts.data.filter(post => 
+          !post.featured && 
+          post.category && 
+          post.category.slug === selectedCategory
+        )
+      );
+    }
+  };
 
-  // Get featured posts
-  const featuredPosts = blogPosts?.data?.filter(post => post.featured);
-  // Get all other posts
-  const regularPosts = blogPosts?.data?.filter(post => !post.featured);
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-black flex items-center justify-center">
+        <div className="text-emerald-500 text-xl">Loading blog posts...</div>
+      </div>
+    );
+  }
+
   
+
   return (
     <div className="min-h-screen bg-black">
       {/* Hero Section */}
@@ -143,34 +99,34 @@ export default async function BlogPage() {
         <section className="py-16">
           <div className="container-custom">
             <h2 className="section-heading text-white mb-12">Featured Articles</h2>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {featuredPosts.map(post => (
                 <div key={post.id} className="bg-gray-900 rounded-lg overflow-hidden border border-gray-800 hover:border-emerald-500 transition-all group">
                   <div className="relative h-60 bg-gray-800">
                     <div className="absolute inset-0 bg-gradient-to-b from-black/0 to-black/70">
-                    <Image src={`http://localhost:1337${post.image.url}`} width={400} height={400} alt={post.image.id} className="object-cover w-full h-full" />
+                      <StrapiImage src={post.image.url} width={400} height={400} alt={post.image.id} className="object-cover w-full h-full" />
                     </div>
                     <div className="absolute bottom-4 left-4">
                       <span className="bg-emerald-600 text-white text-xs px-3 py-1 rounded-full uppercase tracking-wider">
-                        {post.category}
+                        {post.category.category}
                       </span>
                     </div>
                   </div>
                   <div className="p-6">
                     <div className="flex items-center text-sm text-gray-400 mb-3">
-                      <span>{post.date}</span>
+                      <span>{formatDate(post.createdAt || post.date)}</span>
                       <span className="mx-2">•</span>
                       <span>{post.readTime}</span>
                     </div>
                     <h3 className="text-xl font-bold text-white mb-3 group-hover:text-emerald-500 transition-colors">
-                      <Link href={`/blogs/${post.documentId}`}>
+                      <Link href={`/blog/${post.documentId}`}>
                         {post.title}
                       </Link>
                     </h3>
-                    <div className="flex items-center mb-3">
+                    {/* <div className="flex items-center mb-3">
                       <Link 
-                        href={`/blogs/preview/${post.documentId}`}
+                        href={`/blog/preview/${post.documentId}`}
                         className="text-xs text-emerald-500 hover:text-emerald-400 flex items-center"
                       >
                         <svg className="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -179,7 +135,7 @@ export default async function BlogPage() {
                         </svg>
                         Preview Article
                       </Link>
-                    </div>
+                    </div> */}
                     <p className="text-gray-400 mb-5 line-clamp-3">
                       {post.excerpt}
                     </p>
@@ -205,12 +161,17 @@ export default async function BlogPage() {
             <h2 className="section-heading text-white mb-4 md:mb-0">Latest Articles</h2>
             <div className="flex items-center space-x-2">
               <div className="relative">
-                <select className="appearance-none bg-black border border-gray-700 text-white py-2 pl-4 pr-10 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                <select onChange={handleCategoryChange} className="appearance-none bg-black border border-gray-700 text-white py-2 pl-4 pr-10 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500">
                   <option>All Categories</option>
-                  <option>Cloud Security</option>
+                  {categoryData?.data?.map(category => (
+                    <option key={category.slug} value={category.slug}>
+                      {category.category}
+                    </option>
+                  ))}
+                  {/* <option>Cloud Security</option>
                   <option>Threat Intelligence</option>
                   <option>Application Security</option>
-                  <option>Compliance & Governance</option>
+                  <option>Compliance & Governance</option> */}
                 </select>
                 <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-white">
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -231,23 +192,23 @@ export default async function BlogPage() {
               </div>
             </div>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {regularPosts.map(post => (
               <div key={post.id} className="bg-black rounded-lg overflow-hidden border border-gray-800 hover:border-emerald-500 transition-all group">
                 <div className="relative h-48 bg-gray-800">
                   <div className="absolute inset-0 bg-gradient-to-b from-black/0 to-black/70">
-                  <Image src={`http://localhost:1337${post.image.url}`} width={400} height={400} alt={post.image.id} className="object-cover w-full h-full" />
+                    <StrapiImage src={post.image.url} width={400} height={400} alt={post.image.id} className="object-cover w-full h-full" />
                   </div>
                   <div className="absolute bottom-4 left-4">
                     <span className="bg-emerald-600 text-white text-xs px-3 py-1 rounded-full uppercase tracking-wider">
-                      {post.category}
+                      {post.category.category}
                     </span>
                   </div>
                 </div>
                 <div className="p-6">
                   <div className="flex items-center text-sm text-gray-400 mb-3">
-                    <span>{post.date}</span>
+                    <span>{formatDate(post.createdAt || post.date)}</span>
                     <span className="mx-2">•</span>
                     <span>{post.readTime}</span>
                   </div>
@@ -256,7 +217,7 @@ export default async function BlogPage() {
                       {post.title}
                     </Link>
                   </h3>
-                  <div className="flex items-center mb-3">
+                  {/* <div className="flex items-center mb-3">
                     <Link 
                       href={`/blog/preview/${post.documentId}`}
                       className="text-xs text-emerald-500 hover:text-emerald-400 flex items-center"
@@ -267,7 +228,7 @@ export default async function BlogPage() {
                       </svg>
                       Preview Article
                     </Link>
-                  </div>
+                  </div> */}
                   <p className="text-gray-400 mb-5 text-sm line-clamp-3">
                     {post.excerpt}
                   </p>
@@ -282,7 +243,7 @@ export default async function BlogPage() {
               </div>
             ))}
           </div>
-          
+
           {/* Pagination */}
           <div className="mt-12 flex justify-center">
             <div className="flex space-x-2">
@@ -311,7 +272,7 @@ export default async function BlogPage() {
           </div>
         </div>
       </section>
-      
+
       {/* Newsletter */}
       <section className="py-16">
         <div className="container-custom">
