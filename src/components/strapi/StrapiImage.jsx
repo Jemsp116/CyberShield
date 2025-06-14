@@ -17,7 +17,9 @@ export function StrapiImage({
   className,
 }) {
   const imageUrl = getStrapiMedia(src);
+  // console.log("StrapiImage called with src:", src, "and resolved URL:", imageUrl);
   if (!imageUrl) return null;
+  // console.log("StrapiImage resolved URL:", imageUrl);
 
   return (
     <Image

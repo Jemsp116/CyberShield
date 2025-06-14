@@ -7,6 +7,8 @@ import { useRouter } from 'next/navigation';
 import { StrapiImage } from '@/components/strapi/StrapiImage';
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
+import Image from 'next/image';
+
 
 export default function BlogPostPage({ params }) {
   const router = useRouter();
@@ -85,8 +87,8 @@ export default function BlogPostPage({ params }) {
 
   // Extract headings from markdown content for table of contents
   const extractHeadings = (content) => {
-    console.log("*************************************")
-    console.log("Extracting headings from content:", content);
+    // console.log("*************************************")
+    // console.log("Extracting headings from content:", content);
     if (!content || typeof content !== 'string') return [];
 
     const headingRegex = /^##\s+(.+)$/gm;
@@ -105,6 +107,12 @@ export default function BlogPostPage({ params }) {
 
   const headings = extractHeadings(post.blogContent);
 
+  // Format author name for image fallback
+  const formatedAuthor = (author) => {
+    if (!author) return "Unknown Author";
+    return author.split(' ').join('+');
+  };
+
   return (
     <div className="min-h-screen bg-black">
       {/* Hero Section */}
@@ -121,7 +129,24 @@ export default function BlogPostPage({ params }) {
             </div>
             <h1 className="text-3xl md:text-5xl font-bold mb-6">{post.title || "Untitled Post"}</h1>
             <div className="flex items-center">
-              <div className="w-12 h-12 bg-gray-700 rounded-full mr-4"></div>
+              <div className="w-12 h-12 bg-gray-700 rounded-full mr-4">
+                {(post?.authorImage?.url && post?.authorImage?.url.length > 0) ? (
+                  <StrapiImage
+                    src={post.authorImage.url}
+                    width={40}
+                    height={40}
+                    alt={post.authorImage.id}
+                    className="object-cover w-full h-full rounded-full"
+                  />
+                ) : (
+                  <Image
+                    src={`https://ui-avatars.com/api/?background=random&name=${formatedAuthor(post.author)}`}
+                    width={40}
+                    height={40}
+                    alt={formatedAuthor(post.author)}
+                    className="object-cover w-full h-full rounded-full" />
+                )}
+              </div>
               <div>
                 <div className="text-lg font-medium text-white">{post.author || "Unknown Author"}</div>
                 <div className="text-sm text-gray-400">{post.authorDesignation || "Author"}</div>
@@ -206,7 +231,24 @@ export default function BlogPostPage({ params }) {
               {/* Author Bio */}
               <div className="mt-12 bg-gray-900 rounded-lg p-8 border border-gray-800">
                 <div className="flex items-start">
-                  <div className="w-16 h-16 bg-gray-700 rounded-full mr-6 flex-shrink-0"></div>
+                  <div className="w-16 h-16 bg-gray-700 rounded-full mr-6 flex-shrink-0">
+                    {(post?.authorImage?.url && post?.authorImage?.url.length > 0) ? (
+                      <StrapiImage
+                        src={post.authorImage.url}
+                        width={40}
+                        height={40}
+                        alt={post.authorImage.id}
+                        className="object-cover w-full h-full rounded-full"
+                      />
+                    ) : (
+                      <Image
+                        src={`https://ui-avatars.com/api/?background=random&name=${formatedAuthor(post.author)}`}
+                        width={40}
+                        height={40}
+                        alt={formatedAuthor(post.author)}
+                        className="object-cover w-full h-full rounded-full" />
+                    )}
+                  </div>
                   <div>
                     <h3 className="text-xl font-bold text-white mb-2">{post.author || "Unknown Author"}</h3>
                     <p className="text-gray-400 mb-4">{post.authorDesignation || "Author"} at K-Infotech Global Consulting Services</p>
@@ -286,7 +328,15 @@ export default function BlogPostPage({ params }) {
                   <div className="space-y-6">
                     {relatedPosts.map((relatedPost, index) => (
                       <div key={relatedPost.id || relatedPost.documentId || index} className="flex items-start">
-                        <div className="w-20 h-20 bg-gray-800 rounded flex-shrink-0 mr-4"></div>
+                        <div className="w-20 h-20 bg-gray-800 rounded flex-shrink-0 mr-4">
+                          <StrapiImage
+                            src={relatedPost.image?.url || ''}
+                            alt={relatedPost.title || `Related Article ${index + 1}`}
+                            height={80}
+                            width={80}
+                            className="object-cover w-full h-full rounded"
+                          />
+                        </div>
                         <div>
                           <h4 className="font-medium text-white hover:text-emerald-500 transition-colors">
                             <Link href={`/blog/${relatedPost.documentId || relatedPost.slug || ''}`}>

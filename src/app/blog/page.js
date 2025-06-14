@@ -3,6 +3,7 @@ import { getBlogsData, getCategoriesData } from '@/data/loaders';
 import Link from 'next/link';
 import { StrapiImage } from '@/components/strapi/StrapiImage';
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 // Remove the async keyword from the component function
 export default function BlogPage() {
@@ -18,10 +19,10 @@ export default function BlogPage() {
       try {
         const blogData = await getBlogsData();
         const categories = await getCategoriesData();
-        
+
         setBlogPosts(blogData);
         setCategoryData(categories);
-        
+
         if (blogData?.data) {
           const featured = blogData.data.filter(post => post.featured);
           const regular = blogData.data.filter(post => !post.featured);
@@ -34,7 +35,7 @@ export default function BlogPage() {
         setIsLoading(false);
       }
     };
-    
+
     fetchData();
   }, []);
 
@@ -48,22 +49,28 @@ export default function BlogPage() {
       day: 'numeric'
     });
   };
+  // Format author name for image fallback
+  const formatedAuthor = (author) => {
+    if (!author) return "Unknown Author";
+    return author.split(' ').join('+');
+  };
 
   const handleCategoryChange = (event) => {
     const selectedCategory = event.target.value;
-    
+
     if (selectedCategory === "All Categories" && blogPosts?.data) {
       // Reset to show all non-featured posts
       setRegularPosts(blogPosts.data.filter(post => !post.featured));
       return;
     }
-    
+
+
     // Filter by selected category
     if (blogPosts?.data) {
       setRegularPosts(
-        blogPosts.data.filter(post => 
-          !post.featured && 
-          post.category && 
+        blogPosts.data.filter(post =>
+          !post.featured &&
+          post.category &&
           post.category.slug === selectedCategory
         )
       );
@@ -78,7 +85,7 @@ export default function BlogPage() {
     );
   }
 
-  
+
 
   return (
     <div className="min-h-screen bg-black">
@@ -140,7 +147,24 @@ export default function BlogPage() {
                       {post.excerpt}
                     </p>
                     <div className="flex items-center">
-                      <div className="w-10 h-10 bg-gray-700 rounded-full mr-3"></div>
+                      <div className="w-10 h-10 bg-gray-700 rounded-full mr-3">
+                        {(post?.authorImage?.url && post?.authorImage?.url.length > 0) ? (
+                          <StrapiImage
+                            src={post.authorImage.url}
+                            width={40}
+                            height={40}
+                            alt={post.authorImage.id}
+                            className="object-cover w-full h-full rounded-full"
+                          />
+                        ) : (
+                          <Image
+                            src={`https://ui-avatars.com/api/?background=random&name=${formatedAuthor(post.author)}`}
+                            width={40}
+                            height={40}
+                            alt={formatedAuthor(post.author)}
+                            className="object-cover w-full h-full rounded-full" />
+                        )}
+                      </div>
                       <div>
                         <div className="text-sm font-medium text-white">{post.author}</div>
                         <div className="text-xs text-gray-400">{post.authorDesignation}</div>
@@ -168,10 +192,7 @@ export default function BlogPage() {
                       {category.category}
                     </option>
                   ))}
-                  {/* <option>Cloud Security</option>
-                  <option>Threat Intelligence</option>
-                  <option>Application Security</option>
-                  <option>Compliance & Governance</option> */}
+
                 </select>
                 <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-white">
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -233,7 +254,24 @@ export default function BlogPage() {
                     {post.excerpt}
                   </p>
                   <div className="flex items-center text-sm">
-                    <div className="w-8 h-8 bg-gray-700 rounded-full mr-3"></div>
+                    <div className="w-8 h-8 bg-gray-700 rounded-full mr-3">
+                      {(post?.authorImage?.url && post?.authorImage?.url.length > 0) ? (
+                        <StrapiImage
+                          src={post.authorImage.url}
+                          width={40}
+                          height={40}
+                          alt={post.authorImage.id}
+                          className="object-cover w-full h-full rounded-full"
+                        />
+                      ) : (
+                        <Image
+                          src={`https://ui-avatars.com/api/?background=random&name=${formatedAuthor(post.author)}`}
+                          width={40}
+                          height={40}
+                          alt={formatedAuthor(post.author)}
+                          className="object-cover w-full h-full rounded-full" />
+                      )}
+                    </div>
                     <div>
                       <div className="font-medium text-white">{post.author}</div>
                       <div className="text-xs text-gray-400">{post.authorDesignation}</div>

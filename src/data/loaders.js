@@ -31,10 +31,13 @@ export async function getBlogsData(id) {
             image: {
                 fields: ["url"],
             },
+            authorImage: {
+                fields: ["url"],
+            },
             populate: true,
         }
     });
-    console.log(url.href);
+    // console.log(url.href);
     return await fetchData(url.href);
 }
 
@@ -46,6 +49,6 @@ export async function getCategoriesData(id) {
             populate: true,
         }
     });
-    console.log(url.href);
+    // console.log(url.href);
     return await fetchData(url.href);
 }
