@@ -32,7 +32,8 @@ Add or modify content in the respective page components or create new pages by a
 
 ## Deployment
 
-This website can be easily deployed on Vercel or other hosting platforms that support Next.js applications.
+
+This website can be easily deployed on Vercel or other hosting platforms that support Next.js applications.  
 
 
 
