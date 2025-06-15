@@ -254,7 +254,7 @@ const Navbar = () => {
   return (
     <>
       
-      <nav className={`bg-black shadow-lg border-b border-gray-800 sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'py-2' : 'py-4'}`}>
+      <nav className={`bg-black shadow-lg border-b max-w-full border-gray-800 sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'py-2' : 'py-4'}`}>
       <div className="container-custom">
         <div className="flex justify-between items-center">
           {/* Logo */}
@@ -310,13 +310,13 @@ const Navbar = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
                 </svg>
               </button>
-              <div className="absolute left-0 mt-2 w-72 bg-gray-900 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-800 glow-border z-50">
+              <div className="absolute left-0 mt-2 w-64 bg-gray-900 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-800 glow-border z-50">
                 <div className="py-1">
                   {serviceDropdownItems.map((item, index) => (
                     <div key={index} className="relative group/submenu">
                       <Link 
                         href={item.href} 
-                        className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-emerald-500 flex justify-between items-center"
+                        className="px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-emerald-500 flex justify-between items-center"
                       >
                         {item.title}
                         {item.subItems && (
@@ -326,7 +326,7 @@ const Navbar = () => {
                         )}
                       </Link>
                       {item.subItems && (
-                        <div className="absolute left-full top-0 w-80 bg-gray-900 rounded-md shadow-lg opacity-0 invisible group-hover/submenu:opacity-100 group-hover/submenu:visible transition-all duration-300 border border-gray-800 glow-border">
+                        <div className="absolute left-full top-0 w-72 bg-gray-900 rounded-md shadow-lg opacity-0 invisible group-hover/submenu:opacity-100 group-hover/submenu:visible transition-all duration-300 border border-gray-800 glow-border">
                           <div className="py-1">
                             {item.subItems.map((subItem, subIndex) => (
                               <Link 
