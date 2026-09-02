@@ -1,0 +1,16 @@
+{
+  "gridsentry": {
+    "version": "1.0",
+    "api_key": "gs_live_c04145b76fea3ee6d5a490a96c802fde4776e876976d29df",
+    "endpoint": "http://localhost:4000/api/logs/ingest",
+    "project_name": "cyber",
+    "batch_size": 50,
+    "flush_interval_seconds": 5,
+    "watch_paths": [
+      "/var/log/nginx/access.log",
+      "/var/log/apache2/access.log",
+      "/var/log/auth.log",
+      "C:\\inetpub\\logs\\LogFiles\\*.log"
+    ]
+  }
+}
